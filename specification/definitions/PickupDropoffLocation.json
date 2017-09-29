@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/PickupDropoffLocation.json"
+    },
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "code",
+        "address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "123456"
+        },
+        "address": {
+          "$ref": "#/definitions/AddressAttributes"
+        },
+        "opening_hours": {
+          "type": "array",
+          "items": {
+            "$ref": "../definitions/OpeningHours.json"
+          },
+          "minItems": 7,
+          "maxItems": 7
+        },
+        "position": {
+          "$ref": "../definitions/Position.json"
+        }
+      }
+    }
+  }
+}

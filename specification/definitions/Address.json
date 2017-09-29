@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/Address.json"
+    },
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
+    },
+    "attributes": {
+      "$ref": "#/definitions/AddressAttributes"
+    }
+  }
+}

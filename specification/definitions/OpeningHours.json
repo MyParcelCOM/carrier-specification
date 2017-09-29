@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": [
+    "day",
+    "open",
+    "closed"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "day": {
+      "type": "string",
+      "enum": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "example": "Monday"
+    },
+    "open": {
+      "$ref": "../definitions/Time.json"
+    },
+    "closed": {
+      "$ref": "../definitions/Time.json"
+    }
+  }
+}

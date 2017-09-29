@@ -1,0 +1,29 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "$ref": "./specification/info.json"
+  },
+  "host": "$SANDBOX_HOST",
+  "basePath": "/v1",
+  "schemes": [
+    "$SANDBOX_SCHEMA"
+  ],
+  "consumes": [
+    "application/vnd.api+json"
+  ],
+  "produces": [
+    "application/vnd.api+json"
+  ],
+  "paths": {
+    "$ref": "./specification/paths.json"
+  },
+  "definitions": {
+    "$ref": "./specification/definitions.json"
+  },
+  "responses": {
+    "$ref": "./specification/responses.json"
+  },
+  "tags": {
+    "$ref": "./specification/tags.json"
+  }
+}

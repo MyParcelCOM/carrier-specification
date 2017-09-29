@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "about": {
+          "type": "string"
+        }
+      }
+    },
+    "status": {
+      "type": "number",
+      "enum": [
+        "400",
+        "401",
+        "404",
+        "406",
+        "415",
+        "422",
+        "500",
+        "503"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "example": "1234"
+    },
+    "title": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "pointer": {
+          "type": "string"
+        },
+        "parameter": {
+          "type": "string"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "carrier_status": {
+          "type": "string",
+          "example": "500"
+        },
+        "carrier_response": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
