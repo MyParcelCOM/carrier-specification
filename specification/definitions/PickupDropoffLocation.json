@@ -15,15 +15,10 @@
     "attributes": {
       "type": "object",
       "required": [
-        "code",
         "address"
       ],
       "additionalProperties": false,
       "properties": {
-        "code": {
-          "type": "string",
-          "example": "123456"
-        },
         "address": {
           "$ref": "#/definitions/AddressAttributes"
         },
