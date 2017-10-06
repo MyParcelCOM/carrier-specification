@@ -1,0 +1,20 @@
+{
+  "readOnly": true,
+  "type": "object",
+  "required": [
+    "amount",
+    "currency"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "amount": {
+      "type": "number",
+      "example": 100
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "[A-Z]{3}",
+      "example": "EUR"
+    }
+  }
+}

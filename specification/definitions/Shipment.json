@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/Shipment.json"
+    },
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "recipient_address"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "recipient_address": {
+          "$ref": "#/definitions/AddressAttributes"
+        },
+        "sender_address": {
+          "$ref": "#/definitions/AddressAttributes"
+        },
+        "pickup_location": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "example": "123456"
+            },
+            "address": {
+              "$ref": "#/definitions/AddressAttributes"
+            }
+          }
+        },
+        "description": {
+          "type": "string",
+          "example": "order #8008135"
+        },
+        "price": {
+          "$ref": "../definitions/ReadOnlyPrice.json"
+        },
+        "insurance": {
+          "$ref": "../definitions/Price.json"
+        },
+        "barcode": {
+          "readOnly": true,
+          "type": "string",
+          "example": "3SABCD0123456789"
+        },
+        "weight": {
+          "type": "number",
+          "example": 24
+        },
+        "service": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "example": "1203A"
+            },
+            "name": {
+              "type": "string",
+              "example": "Parcel to Parcelshop"
+            }
+          }
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "../definitions/ShipmentOption.json"
+          }
+        },
+        "physical_properties": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "number",
+              "example": 24
+            },
+            "width": {
+              "type": "number",
+              "example": 50
+            },
+            "length": {
+              "type": "number",
+              "example": 50
+            },
+            "volume": {
+              "type": "number",
+              "example": 50
+            },
+            "weight": {
+              "type": "number",
+              "example": 24
+            }
+          }
+        }
+      }
+    }
+  }
+}

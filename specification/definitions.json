@@ -10,5 +10,8 @@
   },
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
+  },
+  "Shipment": {
+    "$ref": "./definitions/Shipment.json"
   }
 }
