@@ -13,5 +13,8 @@
   },
   "Shipment": {
     "$ref": "./definitions/Shipment.json"
+  },
+  "Status": {
+    "$ref": "./definitions/Status.json"
   }
 }
