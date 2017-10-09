@@ -1,5 +1,8 @@
 {
   "/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/PickupDropoffLocations-country_code-postal_code.json"
+  },
+  "/shipments": {
+    "$ref": "./paths/Shipments.json"
   }
 }

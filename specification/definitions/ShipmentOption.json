@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "code",
+    "name"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "code": {
+      "type": "string",
+      "example": "0123A"
+    },
+    "name": {
+      "type": "string",
+      "example": "signature"
+    }
+  }
+}
