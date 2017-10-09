@@ -15,7 +15,10 @@
     "attributes": {
       "type": "object",
       "required": [
-        "recipient_address"
+        "recipient_address",
+        "sender_address",
+        "service",
+        "weight"
       ],
       "additionalProperties": false,
       "properties": {
@@ -27,6 +30,10 @@
         },
         "pickup_location": {
           "type": "object",
+          "required": [
+            "code",
+            "address"
+          ],
           "properties": {
             "code": {
               "type": "string",
@@ -58,6 +65,9 @@
         },
         "service": {
           "type": "object",
+          "required": [
+            "code"
+          ],
           "properties": {
             "code": {
               "type": "string",
