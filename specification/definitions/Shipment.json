@@ -15,7 +15,10 @@
     "attributes": {
       "type": "object",
       "required": [
-        "recipient_address"
+        "recipient_address",
+        "sender_address",
+        "service",
+        "weight"
       ],
       "additionalProperties": false,
       "properties": {
@@ -27,6 +30,10 @@
         },
         "pickup_location": {
           "type": "object",
+          "required": [
+            "code",
+            "address"
+          ],
           "properties": {
             "code": {
               "type": "string",
@@ -58,6 +65,9 @@
         },
         "service": {
           "type": "object",
+          "required": [
+            "code"
+          ],
           "properties": {
             "code": {
               "type": "string",
@@ -98,6 +108,40 @@
             "weight": {
               "type": "number",
               "example": 24
+            }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "readOnly": true,
+            "type": "object",
+            "required": [
+              "resource_type",
+              "data"
+            ],
+            "properties": {
+              "resource_type": {
+                "type": "string",
+                "enum": [
+                  "label",
+                  "barcode",
+                  "invoice"
+                ],
+                "example": "label"
+              },
+              "mime_type": {
+                "type": "string",
+                "example": "application/pdf"
+              },
+              "extension": {
+                "type": "string",
+                "example": "pdf"
+              },
+              "data": {
+                "type": "string",
+                "example": "data:application/pdf;base64,iVBORw0KTaIx+wMm04spN/rQWAAAAABJRU5ErkJggg=="
+              }
             }
           }
         }

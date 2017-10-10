@@ -1,8 +1,7 @@
 {
   "type": "object",
   "required": [
-    "code",
-    "name"
+    "code"
   ],
   "additionalProperties": false,
   "properties": {
