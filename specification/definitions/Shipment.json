@@ -110,6 +110,40 @@
               "example": 24
             }
           }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "readOnly": true,
+            "type": "object",
+            "required": [
+              "resource_type",
+              "data"
+            ],
+            "properties": {
+              "resource_type": {
+                "type": "string",
+                "enum": [
+                  "label",
+                  "barcode",
+                  "invoice"
+                ],
+                "example": "label"
+              },
+              "mime_type": {
+                "type": "string",
+                "example": "application/pdf"
+              },
+              "extension": {
+                "type": "string",
+                "example": "pdf"
+              },
+              "data": {
+                "type": "string",
+                "example": "data:application/pdf;base64,iVBORw0KTaIx+wMm04spN/rQWAAAAABJRU5ErkJggg=="
+              }
+            }
+          }
         }
       }
     }
