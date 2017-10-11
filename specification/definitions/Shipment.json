@@ -10,7 +10,7 @@
       "$ref": "../types/Shipment.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -49,10 +49,10 @@
           "example": "order #8008135"
         },
         "price": {
-          "$ref": "../definitions/ReadOnlyPrice.json"
+          "$ref": "../includes/read-only-price.json"
         },
         "insurance": {
-          "$ref": "../definitions/Price.json"
+          "$ref": "../includes/price.json"
         },
         "barcode": {
           "readOnly": true,
@@ -82,7 +82,21 @@
         "options": {
           "type": "array",
           "items": {
-            "$ref": "../definitions/ShipmentOption.json"
+            "type": "object",
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string",
+                "example": "0123A"
+              },
+              "name": {
+                "type": "string",
+                "example": "signature"
+              }
+            }
           }
         },
         "physical_properties": {
