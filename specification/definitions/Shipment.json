@@ -127,8 +127,8 @@
         },
         "files": {
           "type": "array",
+          "readOnly": true,
           "items": {
-            "readOnly": true,
             "type": "object",
             "required": [
               "resource_type",
@@ -139,7 +139,7 @@
                 "type": "string",
                 "enum": [
                   "label",
-                  "barcode",
+                  "printcode",
                   "invoice"
                 ],
                 "example": "label"
