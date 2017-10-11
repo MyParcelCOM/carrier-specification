@@ -129,7 +129,6 @@
           "type": "array",
           "readOnly": true,
           "items": {
-            "readOnly": true,
             "type": "object",
             "required": [
               "resource_type",
