@@ -139,7 +139,7 @@
                 "type": "string",
                 "enum": [
                   "label",
-                  "barcode",
+                  "printcode",
                   "invoice"
                 ],
                 "example": "label"
