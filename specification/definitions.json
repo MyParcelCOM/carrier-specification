@@ -2,9 +2,6 @@
   "Address": {
     "$ref": "./definitions/Address.json"
   },
-  "AddressAttributes": {
-    "$ref": "./definitions/AddressAttributes.json"
-  },
   "Error": {
     "$ref": "./definitions/Error.json"
   },

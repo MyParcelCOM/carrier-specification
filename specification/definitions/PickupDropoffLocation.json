@@ -20,7 +20,16 @@
       "additionalProperties": false,
       "properties": {
         "address": {
-          "$ref": "#/definitions/AddressAttributes"
+          "type": "object",
+          "required": [
+            "street_1",
+            "city",
+            "country_code"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "$ref": "../properties/Address.json"
+          }
         },
         "opening_hours": {
           "type": "array",
