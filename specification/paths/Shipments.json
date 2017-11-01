@@ -22,7 +22,7 @@
       }
     ],
     "responses": {
-      "200": {
+      "201": {
         "description": "The created shipment.",
         "schema": {
           "type": "object",
