@@ -1,6 +1,6 @@
 # MyParcel.com carrier API specification
 
-Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification).
+Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/carrier-specification](https://docs.myparcel.com/carrier-specification).
 This specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.0.
 
 ## Content
