@@ -155,7 +155,7 @@
         "customs": {
           "type": "object",
           "properties": {
-            "package_type": {
+            "content_type": {
               "type": "string",
               "enum": [
                 "merchandise",
@@ -166,7 +166,7 @@
               ],
               "example": "merchandise"
             },
-            "invoice": {
+            "invoice_number": {
               "type": "string",
               "example": "9000"
             },
@@ -186,25 +186,29 @@
                 "properties": {
                   "sku": {
                     "type": "string",
+                    "minLength": 1,
                     "example": "123456789"
                   },
                   "description": {
                     "type": "string",
-                    "example": "Kittens"
+                    "minLength": 1,
+                    "example": "OnePlus X"
                   },
                   "item_value": {
                     "$ref": "../includes/price.json"
                   },
                   "quantity": {
-                    "type": "string",
-                    "example": "2"
+                    "type": "number",
+                    "example": 2
                   },
                   "hs_code": {
                     "type": "string",
-                    "example": "23091090"
+                    "minLength": 1,
+                    "example": "85171200"
                   },
                   "origin_country_code": {
                     "type": "string",
+                    "minLength": 1,
                     "example": "NL"
                   }
                 }
