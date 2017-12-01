@@ -152,6 +152,84 @@
             }
           }
         },
+        "customs": {
+          "type": "object",
+          "properties": {
+            "content_type": {
+              "type": "string",
+              "enum": [
+                "merchandise",
+                "sample_merchandise",
+                "returned_merchandise",
+                "documents",
+                "gifts"
+              ],
+              "example": "merchandise"
+            },
+            "invoice_number": {
+              "type": "string",
+              "example": "9000"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "sku",
+                  "description",
+                  "item_value",
+                  "quantity",
+                  "hs_code",
+                  "origin_country_code"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "sku": {
+                    "type": "string",
+                    "minLength": 1,
+                    "example": "123456789"
+                  },
+                  "description": {
+                    "type": "string",
+                    "minLength": 1,
+                    "example": "OnePlus X"
+                  },
+                  "item_value": {
+                    "$ref": "../includes/price.json"
+                  },
+                  "quantity": {
+                    "type": "number",
+                    "example": 2
+                  },
+                  "hs_code": {
+                    "type": "string",
+                    "pattern": "^[0-9.]+$",
+                    "example": "8517.12.00"
+                  },
+                  "origin_country_code": {
+                    "$ref": "../includes/country-code.json"
+                  }
+                }
+              }
+            },
+            "non_delivery": {
+              "type": "string",
+              "enum": [
+                "return",
+                "abandon"
+              ],
+              "example": "return"
+            },
+            "incoterm": {
+              "type": "string",
+              "enum": [
+                "DDU",
+                "DDP"
+              ],
+              "example": "DDU"
+            }
+          }
+        },
         "files": {
           "type": "array",
           "readOnly": true,
