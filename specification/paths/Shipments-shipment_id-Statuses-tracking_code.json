@@ -15,10 +15,10 @@
       },
       {
         "in": "path",
-        "name": "barcode",
+        "name": "tracking_code",
         "type": "string",
         "required": true,
-        "description": "Barcode of the shipment."
+        "description": "Tracking code of the shipment."
       }
     ],
     "responses": {

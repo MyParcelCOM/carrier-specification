@@ -5,7 +5,7 @@
   "/shipments": {
     "$ref": "./paths/Shipments.json"
   },
-  "/shipments/{shipment_id}/statuses/{barcode}": {
-    "$ref": "./paths/Shipments-shipment_id-Statuses-barcode.json"
+  "/shipments/{shipment_id}/statuses/{tracking_code}": {
+    "$ref": "./paths/Shipments-shipment_id-Statuses-tracking_code.json"
   }
 }
