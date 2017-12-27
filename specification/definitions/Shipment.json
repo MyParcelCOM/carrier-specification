@@ -86,6 +86,16 @@
           "type": "string",
           "example": "3SABCD0123456789"
         },
+        "tracking_code": {
+          "readOnly": true,
+          "type": "string",
+          "example": "ASD2KUIAF235"
+        },
+        "tracking_url": {
+          "readOnly": true,
+          "type": "string",
+          "example": "https://tracker.carrier.com/ASD2KUIAF235"
+        },
         "weight": {
           "type": "number",
           "example": 24
