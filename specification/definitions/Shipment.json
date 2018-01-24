@@ -18,7 +18,7 @@
         "recipient_address",
         "sender_address",
         "service",
-        "weight"
+        "physical_properties"
       ],
       "additionalProperties": false,
       "properties": {
@@ -96,10 +96,6 @@
           "type": "string",
           "example": "https://tracker.carrier.com/ASD2KUIAF235"
         },
-        "weight": {
-          "type": "number",
-          "example": 24
-        },
         "service": {
           "type": "object",
           "required": [
@@ -137,30 +133,10 @@
           }
         },
         "physical_properties": {
-          "readOnly": true,
-          "type": "object",
-          "properties": {
-            "height": {
-              "type": "number",
-              "example": 24
-            },
-            "width": {
-              "type": "number",
-              "example": 50
-            },
-            "length": {
-              "type": "number",
-              "example": 50
-            },
-            "volume": {
-              "type": "number",
-              "example": 50
-            },
-            "weight": {
-              "type": "number",
-              "example": 24
-            }
-          }
+          "$ref": "../includes/physical-properties.json"
+        },
+        "physical_properties_verified": {
+          "$ref": "../includes/read-only-physical-properties.json"
         },
         "customs": {
           "type": "object",
