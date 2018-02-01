@@ -36,9 +36,7 @@
           "items": {
             "type": "object",
             "required": [
-              "day",
-              "open",
-              "closed"
+              "day"
             ],
             "additionalProperties": false,
             "properties": {
