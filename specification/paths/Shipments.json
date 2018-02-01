@@ -7,12 +7,16 @@
     "description": "This endpoint creates a shipment.",
     "parameters": [
       {
-        "name": "shipment",
         "in": "body",
+        "name": "shipment",
         "description": "The shipment to be created.",
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/Shipment"
