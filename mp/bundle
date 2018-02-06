@@ -8,7 +8,7 @@ json-refs resolve schema.json -f > /opt/spec/dist/swagger.json
 
 if [ "$(uname -s)" == "Linux" ]; then
   echo -e "\033[0;30;47m Fixing file ownership for Linux \033[0m"
-  ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
+  ${COMPOSE} run --rm bundler chown -R $(id -u):$(id -g) /opt/spec/dist
 fi
 
 echo -e "\033[0;30;47m Injecting vars \033[0m"
