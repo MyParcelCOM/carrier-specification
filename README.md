@@ -1,5 +1,9 @@
 # MyParcel.com carrier API specification
 
+[![GitHub release](https://img.shields.io/github/release/MyParcelCOM/carrier-specification/all.svg)](https://github.com/MyParcelCOM/carrier-specification)
+[![Packagist](https://img.shields.io/packagist/v/MyParcelCOM/carrier-specification.svg)](https://packagist.org/packages/myparcelcom/carrier-specification)
+[![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/carrier-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/carrier-specification/swagger.json)
+
 Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/carrier-specification](https://docs.myparcel.com/carrier-specification).
 This specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.0.
 
@@ -10,7 +14,11 @@ This specification adheres to the [Swagger Specification](https://swagger.io/spe
 - [Contributing](#contributing)
 
 ## Installation
-The repository provides docker containers to validate and preview the spec before committing changes. This is also used when validating pull requests.
+The repository provides Docker containers to validate and preview the spec before committing changes.
+This is also used when validating pull requests. To setup the project for development run:
+```bash
+./mp.sh setup
+```
 
 ### Installing Docker
 To install Docker, follow the steps below for your preferred OS.

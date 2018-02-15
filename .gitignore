@@ -1,5 +1,5 @@
 /.env
 /.idea
-/dist/*
-!/dist/.gitkeep
+/dist
+/node_modules
 .DS_Store

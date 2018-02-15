@@ -1,6 +1,6 @@
 {
   "name": "myparcelcom/carrier-specification",
-  "description": "MyParcel.com carrier API specification powering the Swagger documentation.",
-  "homepage": "https://www.myparcel.com",
+  "description": "MyParcel.com carrier API specification.",
+  "homepage": "https://docs.myparcel.com/carrier-specification",
   "type": "library"
 }
