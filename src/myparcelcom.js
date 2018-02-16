@@ -10,7 +10,7 @@
     window.location.search = ''
   }
 
-  document.title = 'API Specification | MyParcel.com'
+  document.title = 'Carrier API Specification | MyParcel.com'
 
   var link = document.createElement('link')
   link.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
@@ -23,9 +23,6 @@
       var baseUrl = document.getElementsByClassName('base-url')[0]
       if ('undefined' !== typeof baseUrl) {
         clearInterval(swaggerInterval)
-
-        // fix base url text
-        baseUrl.innerHTML = '<strong>' + baseUrl.innerText.replace('[', '').replace(']', '').replace(': ', ':</strong> ').trim()
 
         // fix json link timestamp param
         var swaggerlink = baseUrl.nextSibling
@@ -44,18 +41,13 @@
         var version = document.querySelector('.version')
         version.innerHTML = 'Version ' + version.innerText.trim()
         var versionLink = document.createElement('a')
-        versionLink.href = 'https://github.com/MyParcelCOM/api-specification/releases'
+        versionLink.href = 'https://github.com/MyParcelCOM/carrier-specification/releases'
         versionLink.target = '_blank'
         version.parentNode.insertBefore(versionLink, version)
         versionLink.appendChild(version)
 
         // base url link
-        baseUrl.childNodes[1].nodeValue = ' https://' + baseUrl.childNodes[1].nodeValue.trim()
-        var baseUrlNode = document.createElement('a')
-        baseUrlNode.href = baseUrl.childNodes[1].nodeValue.trim()
-        baseUrlNode.target = '_blank'
-        baseUrlNode.appendChild(baseUrl.childNodes[1])
-        baseUrl.appendChild(baseUrlNode)
+        baseUrl.remove()
 
         // make nice
         document.getElementsByClassName('information-container')[0].classList.remove('wrapper')
@@ -65,7 +57,6 @@
         var wrapper = document.createElement('div')
         wrapper.classList.add('wrapper')
         description.parentNode.insertBefore(wrapper, description.nextSibling)
-        wrapper.appendChild(baseUrl)
         var strong = document.createElement('strong')
         strong.innerHTML = 'JSON: '
         wrapper.appendChild(strong)

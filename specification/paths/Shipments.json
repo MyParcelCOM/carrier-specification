@@ -4,12 +4,12 @@
       "Shipments"
     ],
     "summary": "Create a shipment.",
-    "description": "This endpoint creates a shipment.",
+    "description": "This endpoint creates a new shipment in the system of the carrier.",
     "parameters": [
       {
         "in": "body",
         "name": "shipment",
-        "description": "The shipment to be created.",
+        "description": "The shipment object to be created.",
         "required": true,
         "schema": {
           "type": "object",
@@ -27,7 +27,7 @@
     ],
     "responses": {
       "201": {
-        "description": "The created shipment.",
+        "description": "The shipment is created.",
         "schema": {
           "type": "object",
           "required": [
