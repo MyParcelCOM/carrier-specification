@@ -9,7 +9,7 @@
     "amount": {
       "type": "number",
       "example": 995,
-      "description": "Price amount in cents"
+      "description": "price amount in cents"
     },
     "currency": {
       "type": "string",

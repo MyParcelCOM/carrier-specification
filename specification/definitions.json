@@ -1,7 +1,4 @@
 {
-  "Address": {
-    "$ref": "./definitions/Address.json"
-  },
   "Error": {
     "$ref": "./definitions/Error.json"
   },

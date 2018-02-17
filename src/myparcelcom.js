@@ -51,7 +51,6 @@
 
         // make nice
         document.getElementsByClassName('information-container')[0].classList.remove('wrapper')
-        document.querySelector('.description br').style.display = 'none'
 
         // move info elements
         var wrapper = document.createElement('div')

@@ -10,7 +10,10 @@
       "$ref": "../types/PickupDropoffLocation.json"
     },
     "id": {
-      "$ref": "../includes/read-only-uuid.json"
+      "readOnly": true,
+      "type": "string",
+      "example": "8008135",
+      "description": "location identifier used by the carrier"
     },
     "attributes": {
       "type": "object",
@@ -82,7 +85,7 @@
             "distance": {
               "type": "number",
               "example": 1337,
-              "description": "Distance to the location in meters"
+              "description": "distance to the location in meters"
             }
           }
         }

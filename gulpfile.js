@@ -12,8 +12,6 @@ gulp.task('bundle', function () {
     // TODO: remove (probably all) replace functions below when migrated to OpenAPI 3.0 (also clean docker-compose and env.dist)
     .pipe(replace('$SANDBOX_SCHEMA', process.argv[8]))
     .pipe(replace('$SANDBOX_HOST', process.argv[10]))
-    .pipe(replace('$OAUTH_HOST', process.argv[12]))
-    .pipe(replace('$base_url', process.argv[8] + '://' + process.argv[10]))
     .pipe(rename('swagger.json'))
     .pipe(gulp.dest('dist/'))
 })
