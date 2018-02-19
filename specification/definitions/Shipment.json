@@ -10,7 +10,10 @@
       "$ref": "../types/Shipment.json"
     },
     "id": {
-      "$ref": "../includes/read-only-uuid.json"
+      "readOnly": true,
+      "type": "string",
+      "example": "ec234f21-f350-405f-bf02-1c45d1c792e7",
+      "description": "shipment identifier used by the carrier"
     },
     "attributes": {
       "type": "object",
@@ -75,9 +78,6 @@
         "description": {
           "type": "string",
           "example": "order #8008135"
-        },
-        "price": {
-          "$ref": "../includes/read-only-price.json"
         },
         "insurance": {
           "$ref": "../includes/price.json"
@@ -203,7 +203,7 @@
                 "abandon"
               ],
               "example": "return",
-              "description": "Action when the parcel cannot be delivered"
+              "description": "action when the parcel cannot be delivered"
             },
             "incoterm": {
               "type": "string",

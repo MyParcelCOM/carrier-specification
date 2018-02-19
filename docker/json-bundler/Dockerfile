@@ -1,5 +1,3 @@
-FROM node:8-alpine
-
-LABEL maintainer="MyParcel.com <info@myparcel.com>"
+FROM node:9-alpine
 
 RUN npm install -g json-refs

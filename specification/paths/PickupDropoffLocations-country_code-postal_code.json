@@ -4,38 +4,38 @@
       "PickupDropoffLocations"
     ],
     "summary": "Get all the pickup and dropoff locations.",
-    "description": "This endpoint retrieves pickup and dropoff locations.",
+    "description": "This endpoint retrieves pickup and dropoff locations offered by the carrier. These locations can be used as pickup location of a shipment.",
     "parameters": [
       {
         "in": "path",
         "name": "country_code",
         "required": true,
         "type": "string",
-        "description": "The country code."
+        "description": "The country code of the country to search in."
       },
       {
         "in": "path",
         "name": "postal_code",
         "required": true,
         "type": "string",
-        "description": "The postal code."
+        "description": "The postal code of the address to search nearby."
       },
       {
         "in": "query",
         "name": "street",
         "type": "string",
-        "description": "The street name."
+        "description": "A street name to get more accurate results (optional)."
       },
       {
         "in": "query",
         "name": "street_number",
         "type": "string",
-        "description": "The street number."
+        "description": "A street number to get more accurate results (optional)."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the location(s).",
+        "description": "Retrieved the locations.",
         "schema": {
           "type": "object",
           "required": [
@@ -64,23 +64,23 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=3&page[size]=30"
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/NL/1234AB?page[number]=3&page[size]=30"
                 },
                 "first": {
                   "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=1&page[size]=30"
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/NL/1234AB?page[number]=1&page[size]=30"
                 },
                 "prev": {
                   "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=2&page[size]=30"
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/NL/1234AB?page[number]=2&page[size]=30"
                 },
                 "next": {
                   "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=4&page[size]=30"
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/NL/1234AB?page[number]=4&page[size]=30"
                 },
                 "last": {
                   "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=13&page[size]=30"
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/NL/1234AB?page[number]=13&page[size]=30"
                 }
               }
             }

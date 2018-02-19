@@ -10,28 +10,34 @@
       "$ref": "../types/Status.json"
     },
     "id": {
-      "$ref": "../includes/read-only-uuid.json"
+      "readOnly": true,
+      "type": "string",
+      "example": "B01",
+      "description": "status identifier used by the carrier"
     },
     "attributes": {
       "type": "object",
       "required": [
-        "code",
+        "myparcelcom_code",
         "description",
         "timestamp"
       ],
       "additionalProperties": false,
       "properties": {
-        "code": {
+        "myparcelcom_code": {
           "type": "string",
-          "example": "9001"
+          "example": "shipment_registered",
+          "description": "status code used by MyParcel.com"
         },
         "description": {
           "type": "string",
-          "example": "Confirmed at destination"
+          "example": "Confirmed at destination",
+          "description": "description of the carrier status"
         },
         "timestamp": {
           "type": "number",
-          "example": 1504801719
+          "example": 1504801719,
+          "description": "unix timestamp of the status update"
         }
       }
     }
