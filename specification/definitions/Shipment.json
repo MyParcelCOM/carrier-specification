@@ -170,7 +170,7 @@
                 "type": "string",
                 "pattern": "^[0-9.]+$",
                 "example": "8517.12.00",
-                "description": "harmonized System code used by customs"
+                "description": "Harmonized System code used by customs"
               },
               "origin_country_code": {
                 "$ref": "../includes/country-code.json"
