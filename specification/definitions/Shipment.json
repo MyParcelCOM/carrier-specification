@@ -136,9 +136,6 @@
         "physical_properties": {
           "$ref": "../includes/physical-properties.json"
         },
-        "physical_properties_verified": {
-          "$ref": "../includes/read-only-physical-properties.json"
-        },
         "items": {
           "type": "array",
           "items": {
