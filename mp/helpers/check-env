@@ -6,7 +6,7 @@ if [ ! -f ${ROOT_DIR}/.env ]; then
     exit 1
   fi
 
-  cp -a ${ROOT_DIR}/.env.dist ${ROOT_DIR}/.env
+  ${COMPOSE} run --rm bundler cp -a .env.dist .env
 
   echo -e "\033[0;30;47m .env file has been created \033[0m"
 fi
