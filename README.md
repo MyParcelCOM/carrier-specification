@@ -108,4 +108,4 @@ specification/paths/Carriers-carrier_id-Services.json
 Coming Soon.
 
 ## Licence
-All software by MyParcel.com is licenced under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 
+All software by MyParcel.com is licensed under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 
