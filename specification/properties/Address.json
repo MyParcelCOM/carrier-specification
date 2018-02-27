@@ -25,7 +25,7 @@
   },
   "region_code": {
     "type": "string",
-    "pattern": "[A-Z]{3}",
+    "pattern": "^$|^[A-Z]{2,3}$",
     "example": "CRF"
   },
   "country_code": {
