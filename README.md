@@ -23,7 +23,7 @@ To setup the project for development run:
 
 ## Commands
 
-`./mp.sh up` - Start the containers, it will start a server to watch file changes and reload automatically.
+`./mp.sh up` - Start the containers which will start a server to watch file changes and reload automatically.
 
 `./mp.sh down` - Stop the containers.
 
@@ -65,7 +65,7 @@ specification/schemas/CountryCode.json
 ```
 
 ### Path file naming
-The files in `specification/paths` are named to their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route:
+The files in `specification/paths` are named after their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route:
  
 ```
 carriers/{carrier_id}/services
@@ -78,7 +78,7 @@ specification/paths/Carriers-carrier_id-Services.json
 ```
 
 ### Parameter file naming
-Parameter file names are prefixed with the corresponding parameter type. A path parameter for `carrier_id` would get the following file path;
+Parameter file names are prefixed with the corresponding parameter type. A path parameter for `carrier_id` would get the following file path:
 
 ```
 specification/parameters/path-carrier_id.json
