@@ -24,9 +24,16 @@
     "example": "Cardiff"
   },
   "region_code": {
-    "type": "string",
-    "pattern": "[A-Z]{3}",
-    "example": "CRF"
+    "oneOf": [
+      {
+        "type": "string",
+        "pattern": "^[A-Z]{2,3}$",
+        "example": "ENG"
+      },
+      {
+        "type": "null"
+      }
+    ]
   },
   "country_code": {
     "$ref": "../includes/country-code.json"
