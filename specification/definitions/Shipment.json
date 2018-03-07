@@ -19,6 +19,7 @@
       "type": "object",
       "required": [
         "recipient_address",
+        "return_address",
         "sender_address",
         "service",
         "physical_properties"
@@ -26,6 +27,18 @@
       "additionalProperties": false,
       "properties": {
         "recipient_address": {
+          "type": "object",
+          "required": [
+            "street_1",
+            "city",
+            "country_code"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "$ref": "../properties/Address.json"
+          }
+        },
+        "return_address": {
           "type": "object",
           "required": [
             "street_1",
