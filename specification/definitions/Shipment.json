@@ -118,7 +118,7 @@
           "properties": {
             "code": {
               "type": "string",
-              "example": "1203A"
+              "example": "service-a01"
             },
             "name": {
               "type": "string",
@@ -137,11 +137,11 @@
             "properties": {
               "code": {
                 "type": "string",
-                "example": "0123A"
+                "example": "delivery-day:sunday"
               },
               "name": {
                 "type": "string",
-                "example": "signature"
+                "example": "Sunday Delivery"
               }
             }
           }
