@@ -18,10 +18,22 @@
     "attributes": {
       "type": "object",
       "required": [
+        "categories",
         "address"
       ],
       "additionalProperties": false,
       "properties": {
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "pick-up",
+              "drop-off"
+            ],
+            "example": "pick-up"
+          }
+        },
         "address": {
           "type": "object",
           "required": [
