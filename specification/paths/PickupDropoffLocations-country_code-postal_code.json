@@ -24,13 +24,19 @@
         "in": "query",
         "name": "street",
         "type": "string",
-        "description": "A street name to get more accurate results (optional)."
+        "description": "A street name to get more accurate results. (optional)"
       },
       {
         "in": "query",
         "name": "street_number",
         "type": "string",
-        "description": "A street number to get more accurate results (optional)."
+        "description": "A street number to get more accurate results. (optional)"
+      },
+      {
+        "in": "query",
+        "name": "filter[categories]",
+        "type": "string",
+        "description": "Comma separated list of categories."
       }
     ],
     "responses": {
