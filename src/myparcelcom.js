@@ -12,35 +12,35 @@
 
   document.title = 'Carrier API Specification | MyParcel.com'
 
-  var link = document.createElement('link')
+  const link = document.createElement('link')
   link.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
   link.rel = 'stylesheet'
   document.head.appendChild(link)
 
   document.addEventListener('DOMContentLoaded', function () {
     // wait for the swagger.json to be processed
-    var swaggerInterval = setInterval(function () {
-      var baseUrl = document.getElementsByClassName('base-url')[0]
+    const swaggerInterval = setInterval(function () {
+      const baseUrl = document.getElementsByClassName('base-url')[0]
       if ('undefined' !== typeof baseUrl) {
         clearInterval(swaggerInterval)
 
         // fix json link timestamp param
-        var swaggerlink = baseUrl.nextSibling
+        const swaggerlink = baseUrl.nextSibling
         swaggerlink.innerHTML = swaggerlink.innerText.split('?d=')[0]
 
         // move description
-        var description = document.getElementsByClassName('description')[0]
+        const description = document.getElementsByClassName('description')[0]
         description.classList.add('wrapper')
         baseUrl.parentNode.insertBefore(description, baseUrl)
 
         // inject logo
-        var title = document.getElementsByClassName('title')[0]
+        const title = document.getElementsByClassName('title')[0]
         title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://www.myparcel.com/images/myparcel-logo-black.png" alt="MyParcel.com">')
 
         // version link
-        var version = document.querySelector('.version')
+        const version = document.querySelector('.version')
         version.innerHTML = 'Version ' + version.innerText.trim()
-        var versionLink = document.createElement('a')
+        const versionLink = document.createElement('a')
         versionLink.href = 'https://github.com/MyParcelCOM/carrier-specification/releases'
         versionLink.target = '_blank'
         version.parentNode.insertBefore(versionLink, version)
@@ -53,23 +53,18 @@
         document.getElementsByClassName('information-container')[0].classList.remove('wrapper')
 
         // move info elements
-        var wrapper = document.createElement('div')
+        const wrapper = document.createElement('div')
         wrapper.classList.add('wrapper')
         description.parentNode.insertBefore(wrapper, description.nextSibling)
-        var strong = document.createElement('strong')
+        const strong = document.createElement('strong')
         strong.innerHTML = 'JSON: '
         wrapper.appendChild(strong)
         wrapper.appendChild(swaggerlink)
 
         // disable main endpoint accordeons
-        var accordeons = document.querySelectorAll('.opblock-tag, section.models h4')
-        for (var i = 0; i < accordeons.length; i++) {
-          var accordeon = accordeons[i]
-          if (document.attachEvent) {
-            accordeon.attachEvent('onclick', cancelEvent)
-          } else {
-            accordeon.addEventListener('click', cancelEvent)
-          }
+        const accordeons = document.querySelectorAll('.opblock-tag, section.models h4')
+        for (let i = 0; i < accordeons.length; i++) {
+          accordeons[i].addEventListener('click', cancelEvent)
         }
       }
     }, 137)
