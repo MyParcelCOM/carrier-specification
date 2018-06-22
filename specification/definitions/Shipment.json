@@ -31,7 +31,10 @@
           "required": [
             "street_1",
             "city",
-            "country_code"
+            "country_code",
+            "postal_code",
+            "first_name",
+            "last_name"
           ],
           "additionalProperties": false,
           "properties": {
@@ -43,7 +46,8 @@
           "required": [
             "street_1",
             "city",
-            "country_code"
+            "country_code",
+            "postal_code"
           ],
           "additionalProperties": false,
           "properties": {
@@ -55,7 +59,8 @@
           "required": [
             "street_1",
             "city",
-            "country_code"
+            "country_code",
+            "postal_code"
           ],
           "additionalProperties": false,
           "properties": {
@@ -79,7 +84,8 @@
               "required": [
                 "street_1",
                 "city",
-                "country_code"
+                "country_code",
+                "postal_code"
               ],
               "additionalProperties": false,
               "properties": {
