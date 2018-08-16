@@ -98,9 +98,6 @@
           "type": "string",
           "example": "order #8008135"
         },
-        "insurance": {
-          "$ref": "../includes/price.json"
-        },
         "barcode": {
           "readOnly": true,
           "type": "string",
