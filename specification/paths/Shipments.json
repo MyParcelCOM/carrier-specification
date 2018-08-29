@@ -20,6 +20,24 @@
           "properties": {
             "data": {
               "$ref": "#/definitions/Shipment"
+            },
+            "meta": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "track_trace": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "Indicates whether or not the carrier should send track and trace emails for this shipment.",
+                      "example": false,
+                      "default": true
+                    }
+                  }
+                }
+              }
             }
           }
         }
