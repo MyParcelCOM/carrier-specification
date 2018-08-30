@@ -1,3 +1,3 @@
-FROM node:9-alpine
+FROM node:9
 
 RUN npm install -g json-refs
