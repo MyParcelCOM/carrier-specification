@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo -e "\033[0;30;47m Bundling spec \033[0m"
-${COMPOSE} run --rm bundler ash -c "
+${COMPOSE} run --rm bundler bash -c "
 mkdir -p dist
 json-refs resolve schema.json -f > dist/swagger.json
 "
@@ -12,7 +12,7 @@ if [ "$(uname -s)" == "Linux" ]; then
 fi
 
 echo -e "\033[0;30;47m Injecting vars \033[0m"
-${COMPOSE} run --rm bundler ash -c "
+${COMPOSE} run --rm bundler bash -c "
 sed -i 's/\$SANDBOX_HOST/${SANDBOX_HOST}/' dist/swagger.json
 sed -i 's/\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/' dist/swagger.json
 "
