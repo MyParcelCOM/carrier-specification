@@ -20,7 +20,7 @@
     },
     "title": {
       "type": "string",
-      "detail": "Value is too long"
+      "example": "Value is too long"
     },
     "detail": {
       "type": "string",
