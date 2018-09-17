@@ -44,13 +44,6 @@
     "meta": {
       "type": "object",
       "properties": {
-        "carrier_status": {
-          "type": "string",
-          "example": "500"
-        },
-        "carrier_response": {
-          "type": "object"
-        },
         "carrier_rules": {
           "type": "array",
           "items": {
