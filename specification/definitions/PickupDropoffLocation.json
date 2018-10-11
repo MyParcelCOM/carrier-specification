@@ -13,7 +13,7 @@
       "readOnly": true,
       "type": "string",
       "example": "8008135",
-      "description": "location identifier used by the carrier"
+      "description": "Location identifier used by the carrier."
     },
     "attributes": {
       "type": "object",
@@ -105,7 +105,7 @@
         "distance": {
           "type": "number",
           "example": 1337,
-          "description": "distance to the location in meters"
+          "description": "Distance from the specified postal code to the location in meters."
         }
       }
     }
