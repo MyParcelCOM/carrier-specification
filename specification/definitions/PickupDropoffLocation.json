@@ -93,13 +93,19 @@
             "longitude": {
               "type": "number",
               "example": 4.689905
-            },
-            "distance": {
-              "type": "number",
-              "example": 1337,
-              "description": "distance to the location in meters"
             }
           }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "distance": {
+          "type": "number",
+          "example": 1337,
+          "description": "distance to the location in meters"
         }
       }
     }
