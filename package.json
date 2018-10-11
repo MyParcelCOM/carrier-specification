@@ -1,6 +1,6 @@
 {
   "name": "myparcelcom-carrier-specification",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Specification of the carrier API required by MyParcel.com",
   "repository": {
     "type": "git",
@@ -13,13 +13,13 @@
   },
   "homepage": "https://docs.myparcel.com/carrier-specification",
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.0",
     "gulp": "^3.9.1",
     "gulp-json-refs": "^0.1.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0"
   },
   "dependencies": {
-    "swagger-ui-dist": "^3.19.2"
+    "swagger-ui-dist": "^3.19.3"
   }
 }

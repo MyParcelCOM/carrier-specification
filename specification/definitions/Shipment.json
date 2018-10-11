@@ -13,7 +13,7 @@
       "readOnly": true,
       "type": "string",
       "example": "ec234f21-f350-405f-bf02-1c45d1c792e7",
-      "description": "shipment identifier used by the carrier"
+      "description": "Shipment identifier used by the carrier."
     },
     "attributes": {
       "type": "object",
@@ -183,7 +183,7 @@
                 "type": "string",
                 "pattern": "^[0-9.]+$",
                 "example": "8517.12.00",
-                "description": "Harmonized System code used by customs"
+                "description": "Harmonized System code used by customs."
               },
               "origin_country_code": {
                 "$ref": "../includes/country-code.json"
@@ -216,7 +216,7 @@
                 "abandon"
               ],
               "example": "return",
-              "description": "action when the parcel cannot be delivered"
+              "description": "Action when the parcel cannot be delivered."
             },
             "incoterm": {
               "type": "string",
@@ -225,7 +225,7 @@
                 "DDP"
               ],
               "example": "DDU",
-              "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)"
+              "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)."
             }
           }
         },

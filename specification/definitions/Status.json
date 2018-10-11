@@ -13,7 +13,7 @@
       "readOnly": true,
       "type": "string",
       "example": "B01",
-      "description": "status identifier used by the carrier"
+      "description": "Status identifier used by the carrier."
     },
     "attributes": {
       "type": "object",
@@ -27,17 +27,17 @@
         "myparcelcom_code": {
           "type": "string",
           "example": "shipment_registered",
-          "description": "status code used by MyParcel.com"
+          "description": "Status code used by MyParcel.com"
         },
         "description": {
           "type": "string",
           "example": "Confirmed at destination",
-          "description": "description of the carrier status"
+          "description": "Description of the carrier status."
         },
         "timestamp": {
           "type": "number",
           "example": 1504801719,
-          "description": "unix timestamp of the status update"
+          "description": "Unix timestamp of the status update."
         }
       }
     }
