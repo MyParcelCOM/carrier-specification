@@ -4,7 +4,6 @@
     "$ref": "./specification/info.json"
   },
   "host": "$SANDBOX_HOST",
-  "basePath": "/v1",
   "schemes": [
     "$SANDBOX_SCHEMA"
   ],
