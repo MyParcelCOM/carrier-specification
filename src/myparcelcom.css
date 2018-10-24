@@ -459,7 +459,7 @@ a:hover {
 #swagger-ui .topbar a {
   height: 64px;
   max-width: none;
-  background: url(https://www.myparcel.com/images/myparcel-logo-white.png) 0 50% no-repeat;
+  background: url(https://cdn.myparcel.com/images/myparcelcom-white.svg) 0 50% no-repeat;
   background-size: 160px;
 }
 
