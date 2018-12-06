@@ -175,6 +175,11 @@
               "item_value": {
                 "$ref": "../includes/price.json"
               },
+              "item_weight": {
+                "type": "number",
+                "example": "1000",
+                "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
+              },
               "quantity": {
                 "type": "number",
                 "example": 2
