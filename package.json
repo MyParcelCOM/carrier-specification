@@ -1,6 +1,5 @@
 {
   "name": "myparcelcom-carrier-specification",
-  "version": "0.8.2",
   "description": "Specification of the carrier API required by MyParcel.com",
   "repository": {
     "type": "git",
