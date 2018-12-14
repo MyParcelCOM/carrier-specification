@@ -3,9 +3,9 @@
   "info": {
     "$ref": "./specification/info.json"
   },
-  "host": "$SANDBOX_HOST",
+  "host": "localhost",
   "schemes": [
-    "$SANDBOX_SCHEMA"
+    "https"
   ],
   "consumes": [
     "application/vnd.api+json"
