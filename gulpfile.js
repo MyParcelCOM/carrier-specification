@@ -9,9 +9,6 @@ gulp.task('bundle', function () {
   JsonRefs.clearCache()
   return gulp.src('schema.json')
     .pipe(json_refs())
-    // TODO: remove (probably all) replace functions below when migrated to OpenAPI 3.0 (also clean docker-compose and env.dist)
-    .pipe(replace('$SANDBOX_SCHEMA', process.argv[8]))
-    .pipe(replace('$SANDBOX_HOST', process.argv[10]))
     .pipe(rename('swagger.json'))
     .pipe(gulp.dest('dist/'))
 })
@@ -23,7 +20,7 @@ gulp.task('src', function () {
 
 gulp.task('html', function () {
   return gulp.src('src/index.html')
-    .pipe(replace('{{specification-json-url}}', (process.argv[6] !== undefined) ? process.argv[6] + '?d=' + Date.now() : 'http://petstore.swagger.io/v2/swagger.json'))
+    .pipe(replace('{{specification-json-url}}', 'swagger.json?d=' + Date.now()))
     .pipe(gulp.dest('dist/'))
 })
 
@@ -32,8 +29,9 @@ gulp.task('swagger-ui', function () {
     .pipe(gulp.dest('dist/swagger-ui/'))
 })
 
-gulp.task('serve', ['bundle', 'src', 'html', 'swagger-ui'], function () {
+gulp.task('serve', function () {
   browserSync.init({
+    notify: false,
     https: true,
     online: false,
     open: false,
@@ -45,10 +43,17 @@ gulp.task('serve', ['bundle', 'src', 'html', 'swagger-ui'], function () {
   })
 })
 
-gulp.task('bundle-sync', ['bundle'], function () {
+function browserSyncReload (done) {
   browserSync.reload()
-})
+  done()
+}
 
-gulp.task('watch', ['serve'], function () {
-  gulp.watch(['specification/**/*'], {interval: 500}, ['bundle-sync'])
-})
+function watchFiles () {
+  gulp.watch(['specification/**/*'], {interval: 500}, gulp.series('bundle', browserSyncReload))
+  gulp.watch(['src/**/*'], {interval: 500}, gulp.series(gulp.parallel('src', 'html'), browserSyncReload))
+}
+
+gulp.task('watch', gulp.series(
+  gulp.parallel('bundle', 'src', 'html', 'swagger-ui'),
+  gulp.parallel(watchFiles, 'serve')
+))
