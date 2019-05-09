@@ -18,7 +18,7 @@
     "attributes": {
       "type": "object",
       "required": [
-        "myparcelcom_id",
+        "myparcelcom_shipment_id",
         "recipient_address",
         "return_address",
         "sender_address",
@@ -27,7 +27,7 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "myparcelcom_id": {
+        "myparcelcom_shipment_id": {
           "type": "string",
           "example": "mp234f21-f350-405f-bf02-1c45d1c792e7",
           "description": "Shipment identifier used by MyParcel.com."
