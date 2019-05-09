@@ -29,7 +29,8 @@
       "properties": {
         "myparcelcom_shipment_id": {
           "type": "string",
-          "example": "mp234f21-f350-405f-bf02-1c45d1c792e7",
+          "format": "uuid",
+          "example": "7b808eee-bf1c-40cd-98f2-3c335a06417e",
           "description": "Shipment identifier used by MyParcel.com."
         },
         "recipient_address": {
