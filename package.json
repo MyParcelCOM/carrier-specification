@@ -12,13 +12,13 @@
   },
   "homepage": "https://docs.myparcel.com/carrier-specification",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
     "gulp-json-refs": "^0.1.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0"
   },
   "dependencies": {
-    "swagger-ui-dist": "^3.22.0"
+    "swagger-ui-dist": "^3.22.1"
   }
 }
