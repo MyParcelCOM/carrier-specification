@@ -1,6 +1,5 @@
 (function () {
   function cancelEvent (e) {
-    e.preventDefault()
     e.stopPropagation()
     return false
   }
@@ -10,59 +9,53 @@
     window.location.search = ''
   }
 
-  document.title = 'Carrier API Specification | MyParcel.com'
-
-  const link = document.createElement('link')
-  link.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
-  link.rel = 'stylesheet'
-  document.head.appendChild(link)
-
   document.addEventListener('DOMContentLoaded', function () {
     // wait for the swagger.json to be processed
     const swaggerInterval = setInterval(function () {
-      const baseUrl = document.getElementsByClassName('base-url')[0]
-      if ('undefined' !== typeof baseUrl) {
+      const ready = document.getElementsByClassName('title')[0]
+      if ('undefined' !== typeof ready) {
         clearInterval(swaggerInterval)
 
-        // fix json link timestamp param
-        const swaggerlink = baseUrl.nextSibling
-        swaggerlink.innerHTML = swaggerlink.innerText.split('?d=')[0]
-
-        // move description
-        const description = document.getElementsByClassName('description')[0]
-        description.classList.add('wrapper')
-        baseUrl.parentNode.insertBefore(description, baseUrl)
+        // remove empty paragraph from info text
+        const info = document.getElementsByClassName('info')[0]
+        info.innerHTML = info.innerHTML.replace('<p></p>', '')
 
         // inject logo
         const title = document.getElementsByClassName('title')[0]
-        title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://cdn.myparcel.com/images/myparcelcom-black.svg" alt="MyParcel.com">')
+        title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://cdn.myparcel.com/images/myparcelcom-white.svg" alt="MyParcel.com">')
+
+        // inject OpenAPI version
+        const versionsWrapper = document.createElement('span')
+        title.appendChild(versionsWrapper)
+        const firstVersionWrapper = document.querySelector('.version').parentNode
+        versionsWrapper.appendChild(firstVersionWrapper)
+        const openapiVersion = document.createElement('pre')
+        openapiVersion.classList.add('version')
+        const openapiVersionWrapper = document.createElement('small')
+        openapiVersionWrapper.appendChild(openapiVersion)
+        versionsWrapper.appendChild(openapiVersionWrapper)
 
         // version link
-        const version = document.querySelector('.version')
+        const versions = document.querySelectorAll('.version')
+
+        const version = versions[0]
         version.innerHTML = 'Version ' + version.innerText.trim()
         const versionLink = document.createElement('a')
-        versionLink.href = 'https://github.com/MyParcelCOM/carrier-specification/releases'
+        versionLink.href = 'https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md'
         versionLink.target = '_blank'
         version.parentNode.insertBefore(versionLink, version)
         versionLink.appendChild(version)
 
-        // base url link
-        baseUrl.remove()
-
-        // make nice
-        document.getElementsByClassName('information-container')[0].classList.remove('wrapper')
-
-        // move info elements
-        const wrapper = document.createElement('div')
-        wrapper.classList.add('wrapper')
-        description.parentNode.insertBefore(wrapper, description.nextSibling)
-        const strong = document.createElement('strong')
-        strong.innerHTML = 'JSON: '
-        wrapper.appendChild(strong)
-        wrapper.appendChild(swaggerlink)
+        const openapi = versions[1]
+        openapi.innerHTML = 'OpenAPI 2.0'
+        const openapiLink = document.createElement('a')
+        openapiLink.href = 'https://github.com/OAI/OpenAPI-Specification'
+        openapiLink.target = '_blank'
+        openapi.parentNode.insertBefore(openapiLink, openapi)
+        openapiLink.appendChild(openapi)
 
         // disable main endpoint accordeons
-        const accordeons = document.querySelectorAll('.opblock-tag, section.models h4')
+        const accordeons = document.querySelectorAll('.opblock-tag')
         for (let i = 0; i < accordeons.length; i++) {
           accordeons[i].addEventListener('click', cancelEvent)
         }
