@@ -184,7 +184,7 @@
               },
               "item_weight": {
                 "type": "number",
-                "example": "1000",
+                "example": 1000,
                 "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
               },
               "quantity": {
