@@ -41,7 +41,7 @@
         const version = versions[0]
         version.innerHTML = 'Version ' + version.innerText.trim()
         const versionLink = document.createElement('a')
-        versionLink.href = 'https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md'
+        versionLink.href = 'https://github.com/MyParcelCOM/carrier-specification/releases'
         versionLink.target = '_blank'
         version.parentNode.insertBefore(versionLink, version)
         versionLink.appendChild(version)
@@ -49,7 +49,7 @@
         const openapi = versions[1]
         openapi.innerHTML = 'OpenAPI 2.0'
         const openapiLink = document.createElement('a')
-        openapiLink.href = 'https://github.com/OAI/OpenAPI-Specification'
+        openapiLink.href = 'https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md'
         openapiLink.target = '_blank'
         openapi.parentNode.insertBefore(openapiLink, openapi)
         openapiLink.appendChild(openapi)
