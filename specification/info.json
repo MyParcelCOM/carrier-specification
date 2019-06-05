@@ -1,7 +1,7 @@
 {
   "version": "0.12.0",
   "title": "MyParcel.com Carrier API Specification",
-  "description": "**Introduction**This is the carrier API reference for MyParcel.com implementing the [Swagger specification](https://swagger.io/specification) according to [JSON API](http://jsonapi.org) conventions.<br>For more information visit our [API documentation](https://docs.myparcel.com).**Units**Some attributes in the API have values in one of the following units:<ul><li>Currency: cents where applicable (eg. EUR, GBP, USD), otherwise the basic unit (eg. JPY, NOK)</li><li>Distances: meters</li><li>Dimensions: millimeters</li><li>Volumes: liters (dm3)</li><li>Weights: grams</li></ul>",
+  "description": "**Introduction**<br>This is the carrier API reference for MyParcel.com implementing the [OpenApi 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) according to [JSON API](http://jsonapi.org) conventions.<br>For more information visit our [API documentation](https://docs.myparcel.com).<br>**Units**<br>Some attributes in the API have values in one of the following units: <table><tr><th>Currency</th><td>cents/pence where applicable (eg. EUR, GBP, USD), otherwise the basic unit (eg. JPY, NOK)</td></tr><tr><th>Distances</th><td>meters</td></tr><tr><th>Dimensions</th><td>millimeters</td></tr><tr><th>Volumes</th><td>liters (dm3)</td></tr><tr><th>Weights</th><td>grams</td></tr></table>",
   "termsOfService": "https://www.myparcel.com/terms",
   "contact": {
     "name": "Tech Support",

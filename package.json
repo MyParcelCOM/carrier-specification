@@ -1,6 +1,6 @@
 {
   "name": "myparcelcom-carrier-specification",
-  "description": "Specification of the carrier API required by MyParcel.com",
+  "description": "Specification of a carrier API required by MyParcel.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/MyParcelCOM/carrier-specification.git"
@@ -19,6 +19,6 @@
     "gulp-replace": "^1.0.0"
   },
   "dependencies": {
-    "swagger-ui-dist": "^3.22.1"
+    "swagger-ui-dist": "^3.22.2"
   }
 }
