@@ -38,7 +38,7 @@
                 },
                 "label_mime_type": {
                   "type": "string",
-                  "description": "The requested mime-type for the label for this shipment.",
+                  "description": "The requested mime-type for this shipment's label.",
                   "example": "application/pdf"
                 }
               }
