@@ -27,7 +27,6 @@
               "properties": {
                 "track_trace": {
                   "type": "object",
-                  "additionalProperties": false,
                   "properties": {
                     "enabled": {
                       "type": "boolean",
@@ -36,6 +35,11 @@
                       "default": true
                     }
                   }
+                },
+                "label_mime_type": {
+                  "type": "string",
+                  "description": "The requested mime-type for the label for this shipment.",
+                  "example": "application/pdf"
                 }
               }
             }
