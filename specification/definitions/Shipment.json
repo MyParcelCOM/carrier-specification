@@ -270,7 +270,7 @@
               },
               "data": {
                 "type": "string",
-                "example": "data:application/pdf;base64,iVBORw0KTaIx+wMm04spN/rQWAAAAABJRU5ErkJggg=="
+                "example": "iVBORw0KTaIx+wMm04spN/rQWAAAAABJRU5ErkJggg=="
               }
             }
           }
