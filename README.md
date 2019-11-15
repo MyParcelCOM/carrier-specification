@@ -1,6 +1,6 @@
 # MyParcel.com carrier API specification
 
-[![Packagist](https://img.shields.io/packagist/v/MyParcelCOM/carrier-specification.svg)](https://packagist.org/packages/myparcelcom/carrier-specification)
+[![Packagist](https://img.shields.io/packagist/v/myparcelcom/carrier-specification.svg)](https://packagist.org/packages/myparcelcom/carrier-specification)
 [![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/carrier-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/carrier-specification/swagger.json)
 
 Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/carrier-specification](https://docs.myparcel.com/carrier-specification).
