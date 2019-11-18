@@ -14,6 +14,11 @@ a:hover {
   text-decoration: underline;
 }
 
+input:disabled,
+select:disabled {
+  display: none;
+}
+
 #swagger-ui * {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   border-radius: 0;
