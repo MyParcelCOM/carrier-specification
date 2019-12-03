@@ -241,6 +241,11 @@
             }
           }
         },
+        "channel": {
+          "type": "string",
+          "example": "MyParcel.com",
+          "description": "Source of the shipment. Examples include MyParcel.com portal, extension and eBay."
+        },
         "files": {
           "type": "array",
           "readOnly": true,
