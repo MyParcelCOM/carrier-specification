@@ -23,10 +23,10 @@
             },
             "meta": {
               "type": "object",
-              "additionalProperties": false,
               "properties": {
                 "track_trace": {
                   "type": "object",
+                  "additionalProperties": false,
                   "properties": {
                     "enabled": {
                       "type": "boolean",
