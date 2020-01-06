@@ -48,6 +48,10 @@
             "$ref": "../properties/Address.json"
           }
         },
+        "recipient_tax_number": {
+          "type": "string",
+          "example": "H111111-11"
+        },
         "return_address": {
           "type": "object",
           "required": [
