@@ -40,6 +40,12 @@
                   "type": "string",
                   "description": "The requested mime-type for this shipment's label.",
                   "example": "application/pdf"
+                },
+                "print_sku_on_label": {
+                  "type": "boolean",
+                  "description": "Indicates whether or not to display SKU information table on the label.",
+                  "example": true,
+                  "default": false
                 }
               }
             }
