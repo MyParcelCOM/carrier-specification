@@ -25,7 +25,6 @@
         "service",
         "physical_properties"
       ],
-      "additionalProperties": false,
       "properties": {
         "myparcelcom_shipment_id": {
           "type": "string",
@@ -171,7 +170,6 @@
               "description",
               "quantity"
             ],
-            "additionalProperties": false,
             "properties": {
               "sku": {
                 "type": "string",
