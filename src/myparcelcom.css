@@ -73,6 +73,7 @@ select:disabled {
 #swagger-ui .opblock-body pre,
 #swagger-ui .opblock-body pre span,
 #swagger-ui .response-col_description__inner .markdown,
+#swagger-ui .response-col_description__inner .markdown p,
 #swagger-ui .response-col_description__inner .renderedMarkdown,
 #swagger-ui .response-col_description__inner .renderedMarkdown p {
   font-family: 'Courier New', monospace;
@@ -81,6 +82,13 @@ select:disabled {
   font-weight: 300;
   background: #333;
   color: #fafafa;
+}
+
+#swagger-ui .response-col_description__inner .markdown,
+#swagger-ui .response-col_description__inner .renderedMarkdown {
+  display: inline-block;
+  width: 100%;
+  padding: 0 10px;
 }
 
 #swagger-ui .prop-type,
