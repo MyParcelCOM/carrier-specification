@@ -16,7 +16,7 @@
     ],
     "responses": {
       "204": {
-        "description": "The shipment is voided."
+        "description": "The shipment has been voided."
       }
     }
   }
