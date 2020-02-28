@@ -15,7 +15,7 @@
       }
     ],
     "responses": {
-      "422": {
+      "423": {
         "description": "The shipment could not be voided."
       },
       "204": {
