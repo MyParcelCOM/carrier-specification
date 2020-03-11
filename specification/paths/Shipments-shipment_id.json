@@ -1,0 +1,26 @@
+{
+  "delete": {
+    "tags": [
+      "Shipments"
+    ],
+    "summary": "Void a shipment by id.",
+    "description": "This endpoint voids the shipment with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shipment_id",
+        "type": "string",
+        "required": true,
+        "description": "Identifier which has been returned in the shipment POST request."
+      }
+    ],
+    "responses": {
+      "423": {
+        "description": "The shipment could not be voided."
+      },
+      "204": {
+        "description": "The shipment has been voided."
+      }
+    }
+  }
+}
