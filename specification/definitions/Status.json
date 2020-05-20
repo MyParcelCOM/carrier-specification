@@ -38,6 +38,9 @@
           "type": "number",
           "example": 1504801719,
           "description": "Unix timestamp of the status update."
+        },
+        "physical_properties": {
+          "$ref": "../includes/physical-properties.json"
         }
       }
     }

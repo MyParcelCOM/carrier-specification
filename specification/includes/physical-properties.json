@@ -34,6 +34,12 @@
       "minimum": 1,
       "example": 5000,
       "description": "Weight in grams."
+    },
+    "volumetric_weight": {
+      "type": "number",
+      "minimum": 1,
+      "example": 4500,
+      "description": "Volumetric weight in grams."
     }
   }
 }
