@@ -11,5 +11,8 @@
   "license": {
     "name": "MyParcel.com general terms and conditions",
     "url": "https://www.myparcel.com/terms"
+  },
+  "x-logo": {
+    "url": "https://cdn.myparcel.com/images/myparcelcom-black.svg"
   }
 }
