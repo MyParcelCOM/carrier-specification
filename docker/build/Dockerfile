@@ -3,20 +3,24 @@ FROM node:12 as build
 COPY . /build
 WORKDIR /build
 
-RUN apt update \
+RUN apt-get update \
     && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && npm install -g json-refs \
-    && npm install --quiet \
     && mkdir -p dist \
-    && json-refs resolve schema.json -f > dist/swagger.json \
-    && ./node_modules/.bin/gulp src \
-    && ./node_modules/.bin/gulp html \
-    && ./node_modules/.bin/gulp swagger-ui
+    && json-refs resolve schema.json -f > dist/swagger.json
 
-FROM nginx:1.16-alpine
+FROM redocly/redoc:v2.0.0-rc.30
 
-COPY --from=build /build/dist /usr/share/nginx/html/carrier-specification
+ENV SPEC_URL="/dist/swagger.json"
+ENV PAGE_FAVICON="favicon-16x16.png"
 
-ADD ./docker/build/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /build/dist/swagger.json /usr/share/nginx/html/dist/swagger.json
+COPY ./src/index.html /usr/share/nginx/html/index.html
+COPY ./src/myparcelcom.css /usr/share/nginx/html/myparcelcom.css
+COPY ./src/myparcelcom.js /usr/share/nginx/html/myparcelcom.js
+COPY ./src/favicon-16x16.png /usr/share/nginx/html/favicon-16x16.png
+COPY ./src/favicon-32x32.png /usr/share/nginx/html/favicon-32x32.png
+
+CMD ["nginx", "-g", "daemon off;"]
