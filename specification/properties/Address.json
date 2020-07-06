@@ -25,7 +25,6 @@
   },
   "region_code": {
     "type": "string",
-    "pattern": "^[A-Z]{2,3}$",
     "example": "ENG"
   },
   "country_code": {
