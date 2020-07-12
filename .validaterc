@@ -1,0 +1,25 @@
+{
+  "shared": {
+    "operations": {
+      "no_operation_id": "off"
+    },
+    "parameters": {
+      "param_name_case_convention": "off",
+      "accept_type_parameter": "off"
+    },
+    "paths": {
+      "paths_case_convention": "off"
+    },
+    "schemas": {
+      "invalid_type_format_pair": "off",
+      "no_schema_description": "off",
+      "no_property_description": "off",
+      "description_mentions_json": "off",
+      "inconsistent_property_type": "off",
+      "enum_case_convention": "off"
+    },
+    "walker": {
+      "no_empty_descriptions": "off"
+    }
+  }
+}
