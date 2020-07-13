@@ -3,8 +3,8 @@
 [![Packagist](https://img.shields.io/packagist/v/myparcelcom/carrier-specification.svg)](https://packagist.org/packages/myparcelcom/carrier-specification)
 [![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/carrier-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/carrier-specification/swagger.json)
 
-Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/carrier-specification](https://docs.myparcel.com/carrier-specification).
-This specification adheres to the [Swagger 2.0 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) and implements the [JSON API specification](http://jsonapi.org/).
+Description of the API specification used by MyParcel.com located at [https://carrier-specification.myparcel.com](https://carrier-specification.myparcel.com).
+This specification adheres to the [Swagger 2.0 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) and implements the [JSON API specification](https://jsonapi.org).
 
 ## Content
 - [Installation](#installation)
@@ -32,7 +32,7 @@ To setup the project for development run:
 > **NOTE:** The validator only works when the containers are already running. Don't forget to start them.
 
 ## Conventions
-Conventions based on the [Swagger](https://swagger.io/specification) and [JSON Schema](http://json-schema.org) specs.
+Conventions based on the [Swagger](https://swagger.io/specification) and [JSON Schema](https://json-schema.org) specs.
 
 Our internal conventions are described below.
 

@@ -1,6 +1,6 @@
 {
   "name": "myparcelcom/carrier-specification",
   "description": "MyParcel.com carrier API specification.",
-  "homepage": "https://docs.myparcel.com/carrier-specification",
+  "homepage": "https://carrier-specification.myparcel.com",
   "type": "library"
 }
