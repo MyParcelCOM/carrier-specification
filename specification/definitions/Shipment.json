@@ -181,6 +181,11 @@
                 "minLength": 1,
                 "example": "OnePlus X"
               },
+              "image_url": {
+                "type": "string",
+                "example": "https://myparcel.com/product.png",
+                "description": "A link to an image of the item."
+              },
               "item_value": {
                 "$ref": "../includes/price.json"
               },
