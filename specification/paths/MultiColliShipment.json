@@ -1,0 +1,52 @@
+{
+  "post": {
+    "tags": [
+      "Multi-colli shipment"
+    ],
+    "summary": "Create a multi-colli shipment.",
+    "description": "This endpoint creates a new multi-colli shipment in the system of the carrier.",
+    "parameters": [
+      {
+        "in": "body",
+        "name": "Multi-colli shipment",
+        "description": "The multi-colli shipment to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Shipment"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "The shipment has been created.",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Shipment"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
