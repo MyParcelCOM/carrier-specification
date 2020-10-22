@@ -289,6 +289,7 @@
         },
         "parcel_number": {
           "type": "number",
+          "readOnly": true,
           "example": 1,
           "description": "A number identifying this parcel in a multi-colli shipment."
         }
