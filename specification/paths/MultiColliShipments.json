@@ -1,0 +1,80 @@
+{
+  "post": {
+    "tags": [
+      "MultiColliShipments"
+    ],
+    "summary": "Create a multi-colli shipment.",
+    "description": "This endpoint creates a new multi-colli shipment in the system of the carrier.",
+    "parameters": [
+      {
+        "in": "body",
+        "name": "Multi-colli shipment",
+        "description": "The multi-colli shipment to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Shipment"
+              }
+            },
+            "meta": {
+              "type": "object",
+              "properties": {
+                "track_trace": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "Indicates whether or not the carrier should send track and trace emails for this shipment.",
+                      "example": false,
+                      "default": true
+                    }
+                  }
+                },
+                "label_mime_type": {
+                  "type": "string",
+                  "description": "The requested mime-type for this shipment's label.",
+                  "example": "application/pdf"
+                },
+                "print_sku_on_label": {
+                  "type": "boolean",
+                  "description": "Indicates whether or not to display SKU information table on the label.",
+                  "example": true,
+                  "default": false
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "The shipment has been created.",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Shipment"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
