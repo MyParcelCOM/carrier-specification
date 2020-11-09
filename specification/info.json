@@ -1,5 +1,5 @@
 {
-  "version": "1.2.6",
+  "version": "1.3.1",
   "title": "MyParcel.com Carrier API Specification",
   "description": "**Introduction**<br>This is the technical reference for MyParcel.com Carrier microservices implementing the [OpenApi 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) according to [JSON API](https://jsonapi.org) conventions.<br>Check our [API documentation](https://docs.myparcel.com) for more information and code examples.<br>Check our [GitHub releases](https://github.com/MyParcelCOM/carrier-specification/releases) for a complete version history.<br><br>**Units**<br>Some attributes in the API have values in one of the following units: <table><tr><th>Currency</th><td>cents / pence</td></tr><tr><th>Distances</th><td>meters</td></tr><tr><th>Dimensions</th><td>millimeters</td></tr><tr><th>Timestamps</th><td>Coordinated Universal Time (UTC)</td></tr><tr><th>Volumes</th><td>liters (dm3)</td></tr><tr><th>Weights</th><td>grams</td></tr></table>",
   "termsOfService": "https://www.myparcel.com/legal",
