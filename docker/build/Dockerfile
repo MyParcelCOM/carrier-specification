@@ -1,4 +1,4 @@
-FROM node:12 as build
+FROM node:14 as build
 
 COPY . /build
 WORKDIR /build
@@ -11,7 +11,7 @@ RUN apt-get update \
     && mkdir -p dist \
     && json-refs resolve schema.json -f > dist/swagger.json
 
-FROM redocly/redoc:v2.0.0-rc.30
+FROM redocly/redoc:v2.0.0-rc.46
 
 ENV SPEC_URL="/dist/swagger.json"
 ENV PAGE_FAVICON="favicon-16x16.png"
