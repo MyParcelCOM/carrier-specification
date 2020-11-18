@@ -4,8 +4,7 @@ body {
 }
 
 img[alt=logo] {
-  width: 220px !important;
-  margin: 20px 0 !important;
+  width: 200px;
 }
 
 redoc {

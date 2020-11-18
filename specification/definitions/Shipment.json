@@ -159,6 +159,9 @@
             }
           }
         },
+        "total_value": {
+          "$ref": "../includes/price.json"
+        },
         "physical_properties": {
           "$ref": "../includes/physical-properties.json"
         },
