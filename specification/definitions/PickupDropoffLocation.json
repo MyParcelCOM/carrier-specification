@@ -21,7 +21,6 @@
         "categories",
         "address"
       ],
-      "additionalProperties": false,
       "properties": {
         "categories": {
           "type": "array",
@@ -41,7 +40,6 @@
             "city",
             "country_code"
           ],
-          "additionalProperties": false,
           "properties": {
             "$ref": "../properties/Address.json"
           }
@@ -53,7 +51,6 @@
             "required": [
               "day"
             ],
-            "additionalProperties": false,
             "properties": {
               "day": {
                 "type": "string",
@@ -84,7 +81,6 @@
             "latitude",
             "longitude"
           ],
-          "additionalProperties": false,
           "properties": {
             "latitude": {
               "type": "number",
@@ -100,7 +96,6 @@
     },
     "meta": {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "distance": {
           "type": "number",

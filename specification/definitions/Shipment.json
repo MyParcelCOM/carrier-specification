@@ -41,7 +41,6 @@
             "first_name",
             "last_name"
           ],
-          "additionalProperties": false,
           "properties": {
             "$ref": "../properties/Address.json"
           }
@@ -57,7 +56,6 @@
             "city",
             "country_code"
           ],
-          "additionalProperties": false,
           "properties": {
             "$ref": "../properties/Address.json"
           }
@@ -69,7 +67,6 @@
             "city",
             "country_code"
           ],
-          "additionalProperties": false,
           "properties": {
             "$ref": "../properties/Address.json"
           }
@@ -84,7 +81,6 @@
             "code",
             "address"
           ],
-          "additionalProperties": false,
           "properties": {
             "code": {
               "type": "string",
@@ -97,7 +93,6 @@
                 "city",
                 "country_code"
               ],
-              "additionalProperties": false,
               "properties": {
                 "$ref": "../properties/Address.json"
               }
@@ -146,7 +141,6 @@
             "required": [
               "code"
             ],
-            "additionalProperties": false,
             "properties": {
               "code": {
                 "type": "string",
@@ -257,8 +251,8 @@
           "description": "Source of the shipment. Examples include MyParcel.com portal, extension and eBay."
         },
         "files": {
-          "type": "array",
           "readOnly": true,
+          "type": "array",
           "items": {
             "type": "object",
             "required": [
