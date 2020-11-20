@@ -23,8 +23,9 @@
     "type": "string",
     "example": "Cardiff"
   },
-  "region_code": {
+  "state_code": {
     "type": "string",
+    "pattern": "^[A-Z\\d]{1,3}$",
     "example": "ENG"
   },
   "country_code": {
