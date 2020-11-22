@@ -2,6 +2,7 @@
   "type": "object",
   "required": [
     "type",
+    "id",
     "attributes"
   ],
   "additionalProperties": false,

@@ -46,7 +46,10 @@
           }
         },
         "recipient_tax_number": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "example": "H111111-11"
         },
         "return_address": {
@@ -72,7 +75,10 @@
           }
         },
         "sender_tax_number": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "example": "G666666-66"
         },
         "pickup_location": {
@@ -100,7 +106,10 @@
           }
         },
         "description": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "example": "order #8008135"
         },
         "barcode": {
@@ -246,9 +255,12 @@
           }
         },
         "channel": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "example": "MyParcel.com",
-          "description": "Source of the shipment. Examples include MyParcel.com portal, extension and eBay."
+          "description": "Name of the application used to create the shipment."
         },
         "files": {
           "readOnly": true,
