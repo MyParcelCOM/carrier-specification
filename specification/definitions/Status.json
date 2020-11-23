@@ -22,7 +22,6 @@
         "description",
         "timestamp"
       ],
-      "additionalProperties": false,
       "properties": {
         "myparcelcom_code": {
           "type": "string",
