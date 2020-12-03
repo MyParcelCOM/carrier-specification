@@ -22,11 +22,10 @@
         "description",
         "timestamp"
       ],
-      "additionalProperties": false,
       "properties": {
         "myparcelcom_code": {
           "type": "string",
-          "example": "shipment_registered",
+          "example": "shipment-registered",
           "description": "Status code used by MyParcel.com"
         },
         "description": {
