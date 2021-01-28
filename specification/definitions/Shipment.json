@@ -213,10 +213,10 @@
               "origin_country_code": {
                 "$ref": "../includes/country-code.json"
               },
-              "item_tax": {
+              "tax": {
                 "$ref": "../includes/price-readonly.json"
               },
-              "item_duty": {
+              "duty": {
                 "$ref": "../includes/price-readonly.json"
               }
             }
