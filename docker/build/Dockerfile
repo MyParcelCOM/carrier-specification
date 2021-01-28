@@ -11,7 +11,7 @@ RUN apt-get update \
     && mkdir -p dist \
     && json-refs resolve schema.json -f > dist/swagger.json
 
-FROM redocly/redoc:v2.0.0-rc.46
+FROM redocly/redoc:v2.0.0-rc.48
 
 ENV SPEC_URL="/dist/swagger.json"
 ENV PAGE_FAVICON="favicon-16x16.png"
