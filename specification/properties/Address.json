@@ -45,7 +45,7 @@
     "description": "The country subdivision code (second part of the ISO 3166-2 format). Required by some carriers for the United States or Canada."
   },
   "country_code": {
-    "$ref": "../includes/country-code.json"
+    "$ref": "#/definitions/CountryCode"
   },
   "first_name": {
     "type": "string",
