@@ -4,28 +4,31 @@ jobs:
     docker:
       - image: myparcelcom/build-utils
         auth:
-          username: ${DOCKER_USER}
-          password: ${DOCKER_PASSWORD}
+          username: ${DOCKER_CLOUD_USER}
+          password: ${DOCKER_CLOUD_PASSWORD}
     working_directory: ~/project
     steps:
       - checkout
-      - setup_remote_docker
+      - setup_remote_docker:
+          version: 19.03.13
+      - run:
+          name: Authenticate AWS ECR
+          command: ecr-login
       - run:
           name: Building and Pushing Docker images
           command: |
-            IMAGE_TAG=$(image_tag)
+            IMAGE_NAME="${ECR_REGISTRY}/myparcelcom/carrier-specification:$(image_tag)"
             docker build \
-              -t myparcelcom/carrier-specification:${IMAGE_TAG} \
+              -t ${IMAGE_NAME} \
               -f docker/build/Dockerfile .
-            docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-            docker push myparcelcom/carrier-specification:${IMAGE_TAG}
+            docker push ${IMAGE_NAME}
 
   deploy:
     docker:
       - image: myparcelcom/build-utils
         auth:
-          username: ${DOCKER_USER}
-          password: ${DOCKER_PASSWORD}
+          username: ${DOCKER_CLOUD_USER}
+          password: ${DOCKER_CLOUD_PASSWORD}
     parameters:
       is_sandbox:
         type: string
@@ -36,11 +39,7 @@ jobs:
       - checkout
       - run:
           name: Bootstrap AWS EKS and kubectl
-          command: |
-            export CLUSTER=$(cluster_name)
-            export AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
-            export AWS_SECRET_KEY=${AWS_SECRET_ACCESS_KEY}
-            bootstrap
+          command: kubectl-config
       - run:
           name: Process templates
           command: |
@@ -61,6 +60,7 @@ workflows:
   deploy:
     jobs:
       - build:
+          context: [ "aws", "docker_cloud" ]
           filters:
             branches:
               only:
@@ -69,6 +69,7 @@ workflows:
             tags:
               only: /^v\d+\.\d+\.\d+$/
       - deploy:
+          context: [ "aws", "docker_cloud" ]
           requires:
             - build
           filters:
