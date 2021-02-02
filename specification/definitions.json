@@ -1,4 +1,7 @@
 {
+  "CountryCode": {
+    "$ref": "./definitions/CountryCode.json"
+  },
   "Error": {
     "$ref": "./definitions/Error.json"
   },
@@ -10,5 +13,8 @@
   },
   "Status": {
     "$ref": "./definitions/Status.json"
+  },
+  "TaxIdentificationNumber": {
+    "$ref": "./definitions/TaxIdentificationNumber.json"
   }
 }
