@@ -81,6 +81,12 @@
           ],
           "example": "G666666-66"
         },
+        "tax_identification_numbers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TaxIdentificationNumber"
+          }
+        },
         "pickup_location": {
           "type": "object",
           "required": [
@@ -211,7 +217,7 @@
                 "description": "Harmonized System code used by customs."
               },
               "origin_country_code": {
-                "$ref": "../includes/country-code.json"
+                "$ref": "#/definitions/CountryCode"
               },
               "tax": {
                 "$ref": "../includes/price-readonly.json"
