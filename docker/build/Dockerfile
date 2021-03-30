@@ -3,11 +3,7 @@ FROM node:14 as build
 COPY . /build
 WORKDIR /build
 
-RUN apt-get update \
-    && apt-get -y autoremove \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && npm install -g json-refs \
+RUN npm install -g json-refs \
     && mkdir -p dist \
     && json-refs resolve schema.json -f > dist/swagger.json
 
