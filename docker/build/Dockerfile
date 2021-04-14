@@ -7,7 +7,7 @@ RUN npm install -g json-refs \
     && mkdir -p dist \
     && json-refs resolve schema.json -f > dist/swagger.json
 
-FROM redocly/redoc:v2.0.0-rc.50
+FROM redocly/redoc:v2.0.0-rc.51
 
 ENV SPEC_URL="/dist/swagger.json"
 ENV PAGE_FAVICON="favicon-16x16.png"
