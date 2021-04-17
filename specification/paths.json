@@ -1,5 +1,5 @@
 {
-  "multi-colli-shipment": {
+  "/multi-colli-shipments": {
     "$ref": "./paths/MultiColliShipments.json"
   },
   "/pickup-dropoff-locations/{country_code}/{postal_code}": {
