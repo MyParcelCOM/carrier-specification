@@ -16,7 +16,10 @@
       "description": "Eori XI number"
     },
     "description": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "Eori XI number for Northern Ireland"
     },
     "type": {
