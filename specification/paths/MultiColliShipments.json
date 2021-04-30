@@ -40,14 +40,39 @@
                 },
                 "label_mime_type": {
                   "type": "string",
-                  "description": "The requested mime-type for this shipment's label.",
-                  "example": "application/pdf"
+                  "description": "Deprecated, use `meta.label.mime_type` instead. The requested mime-type for this shipment's label.",
+                  "example": "application/pdf",
+                  "deprecated": true
+                },
+                "label": {
+                  "type": "object",
+                  "properties": {
+                    "mime_type": {
+                      "type": "string",
+                      "example": "application/pdf",
+                      "default": "application/pdf",
+                      "description": "Requested `mime-type` for the label of this shipment."
+                    },
+                    "size": {
+                      "type": "string",
+                      "example": "A6",
+                      "default": "A6",
+                      "description": "Requested size for the label of this shipment."
+                    },
+                    "print_sku_on_label": {
+                      "type": "boolean",
+                      "description": "Indicates whether or not to display SKU information table on the label.",
+                      "example": true,
+                      "default": false
+                    }
+                  }
                 },
                 "print_sku_on_label": {
                   "type": "boolean",
-                  "description": "Indicates whether or not to display SKU information table on the label.",
+                  "description": "Deprecated, use `meta.label.print_sku_on_label` instead. Indicates whether or not to display SKU information table on the label.",
                   "example": true,
-                  "default": false
+                  "default": false,
+                  "deprecated": true
                 }
               }
             }
