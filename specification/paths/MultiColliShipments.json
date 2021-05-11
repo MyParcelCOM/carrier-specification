@@ -9,7 +9,7 @@
       {
         "in": "body",
         "name": "Multi-colli shipment",
-        "description": "The multi-colli shipment to be created.",
+        "description": "The virtual master shipment and colli shipments to be created as one multi-colli shipment.",
         "required": true,
         "schema": {
           "type": "object",
@@ -21,7 +21,7 @@
             "data": {
               "type": "object",
               "properties": {
-                "shipment": {
+                "master": {
                   "$ref": "#/definitions/Shipment"
                 },
                 "colli": {
@@ -88,7 +88,7 @@
             "data": {
               "type": "object",
               "properties": {
-                "shipment": {
+                "master": {
                   "$ref": "#/definitions/Shipment"
                 },
                 "colli": {
