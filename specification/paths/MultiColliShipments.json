@@ -9,7 +9,7 @@
       {
         "in": "body",
         "name": "Multi-colli shipment",
-        "description": "The multi-colli shipment to be created.",
+        "description": "The virtual master shipment and colli shipments to be created as one multi-colli shipment.",
         "required": true,
         "schema": {
           "type": "object",
@@ -19,9 +19,17 @@
           "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Shipment"
+              "type": "object",
+              "properties": {
+                "master": {
+                  "$ref": "#/definitions/Shipment"
+                },
+                "colli": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Shipment"
+                  }
+                }
               }
             },
             "meta": {
@@ -37,12 +45,6 @@
                       "default": true
                     }
                   }
-                },
-                "label_mime_type": {
-                  "type": "string",
-                  "description": "Deprecated, use `meta.label.mime_type` instead. The requested mime-type for this shipment's label.",
-                  "example": "application/pdf",
-                  "deprecated": true
                 },
                 "label": {
                   "type": "object",
@@ -66,13 +68,6 @@
                       "default": false
                     }
                   }
-                },
-                "print_sku_on_label": {
-                  "type": "boolean",
-                  "description": "Deprecated, use `meta.label.print_sku_on_label` instead. Indicates whether or not to display SKU information table on the label.",
-                  "example": true,
-                  "default": false,
-                  "deprecated": true
                 }
               }
             }
@@ -91,9 +86,17 @@
           "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Shipment"
+              "type": "object",
+              "properties": {
+                "master": {
+                  "$ref": "#/definitions/Shipment"
+                },
+                "colli": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Shipment"
+                  }
+                }
               }
             }
           }
