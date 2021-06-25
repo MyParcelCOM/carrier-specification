@@ -99,7 +99,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/TaxIdentificationNumber"
-          }
+          },
+          "description": "Use `sender_tax_identification_numbers` instead.",
+          "deprecated": true
         },
         "pickup_location": {
           "type": "object",
