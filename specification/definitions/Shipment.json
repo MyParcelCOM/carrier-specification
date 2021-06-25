@@ -48,7 +48,7 @@
         "recipient_tax_identification_numbers": {
           "type": "array",
           "items": {
-            "$ref": "#/components/schemas/TaxIdentificationNumber"
+            "$ref": "#/definitions/TaxIdentificationNumber"
           }
         },
         "recipient_tax_number": {
@@ -85,7 +85,7 @@
           "type": "array",
           "description": "Sender tax numbers provided with a shipment will overwrite any tax identification numbers of the same `type` and `country_code` defined on the organization of the shop related to this shipment.",
           "items": {
-            "$ref": "#/components/schemas/TaxIdentificationNumber"
+            "$ref": "#/definitions/TaxIdentificationNumber"
           }
         },
         "sender_tax_number": {
