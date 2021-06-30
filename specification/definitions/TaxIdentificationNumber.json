@@ -25,6 +25,7 @@
       "type": "string",
       "enum": [
         "eori",
+        "ioss",
         "vat"
       ],
       "example": "eori"
