@@ -180,6 +180,12 @@
               "name": {
                 "type": "string",
                 "example": "Sunday Delivery"
+              },
+              "values": {
+                "type": "object",
+                "example": {
+                  "pin": "1234"
+                }
               }
             }
           }
