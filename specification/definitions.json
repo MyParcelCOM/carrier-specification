@@ -8,6 +8,9 @@
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
   },
+  "ServiceRate": {
+    "$ref": "./definitions/ServiceRate.json"
+  },
   "Shipment": {
     "$ref": "./definitions/Shipment.json"
   },

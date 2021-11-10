@@ -1,4 +1,7 @@
 {
+  "/get-service-rates": {
+    "$ref": "./paths/ServiceRates.json"
+  },
   "/multi-colli-shipments": {
     "$ref": "./paths/MultiColliShipments.json"
   },
