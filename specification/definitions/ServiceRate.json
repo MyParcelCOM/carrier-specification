@@ -11,16 +11,8 @@
     "attributes": {
       "type": "object",
       "required": [
-        "code",
-        "weight_min",
-        "weight_max",
-        "length_max",
-        "width_max",
-        "height_max",
-        "volume_max",
         "price",
-        "purchase_price",
-        "fuel_surcharge"
+        "purchase_price"
       ],
       "properties": {
         "code": {

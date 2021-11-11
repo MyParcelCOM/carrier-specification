@@ -1,7 +1,7 @@
 {
   "post": {
     "tags": [
-      "Service rates"
+      "ServiceRates"
     ],
     "summary": "Get service rates for a shipment",
     "description": "This endpoint retrieves service rates of the carrier based on the supplied shipment.",
@@ -19,7 +19,7 @@
           "additionalProperties": false,
           "properties": {
             "data": {
-              "$ref": "#/definitions/Shipment"
+              "$ref": "#/definitions/BaseShipment"
             }
           }
         }
