@@ -21,7 +21,6 @@
         "recipient_address",
         "return_address",
         "sender_address",
-        "service",
         "physical_properties"
       ],
       "properties": {

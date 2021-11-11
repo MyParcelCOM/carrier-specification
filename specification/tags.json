@@ -1,14 +1,14 @@
 [
   {
-    "name": "ServiceRates",
-    "description": ""
-  },
-  {
     "name": "MultiColliShipments",
     "description": ""
   },
   {
     "name": "PickupDropoffLocations",
+    "description": ""
+  },
+  {
+    "name": "ServiceRates",
     "description": ""
   },
   {
