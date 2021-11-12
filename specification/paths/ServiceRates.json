@@ -1,0 +1,53 @@
+{
+  "post": {
+    "tags": [
+      "ServiceRates"
+    ],
+    "summary": "Get service rates for a shipment",
+    "description": "This endpoint retrieves service rates of the carrier based on the supplied shipment.",
+    "parameters": [
+      {
+        "in": "body",
+        "name": "shipment",
+        "description": "The shipment object to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/BaseShipment"
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the service rates.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/ServiceRate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
