@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes",
+    "relationships"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/Manifest.json"
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "my-manifest"
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "required": [
+        "shipments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "shipments": {
+          "$ref": "#/definitions/ShipmentRelationship"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "post": {
+    "tags": [
+      "Manifests"
+    ],
+    "summary": "Create a manifest",
+    "description": "This endpoint is used to create manifests.",
+    "parameters": [
+      {
+        "in": "body",
+        "name": "manifest",
+        "description": "The manifest object to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Manifest"
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Created the manifest.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "files"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Manifest"
+                  }
+                },
+                "files": {
+                  "readOnly": true,
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "resource_type",
+                      "data"
+                    ],
+                    "properties": {
+                      "resource_type": {
+                        "$ref": "../includes/resource-type.json"
+                      },
+                      "mime_type": {
+                        "type": "string",
+                        "example": "application/pdf"
+                      },
+                      "extension": {
+                        "type": "string",
+                        "example": "pdf"
+                      },
+                      "data": {
+                        "type": "string",
+                        "example": "iVBORw0KTaIx+wMm04spN/rQWAAAAABJRU5ErkJggg=="
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

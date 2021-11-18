@@ -8,6 +8,12 @@
   "Error": {
     "$ref": "./definitions/Error.json"
   },
+  "Manifest": {
+    "$ref": "./definitions/Manifest.json"
+  },
+  "MinimalShipment": {
+    "$ref": "./definitions/MinimalShipment.json"
+  },
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
   },
@@ -16,6 +22,9 @@
   },
   "Shipment": {
     "$ref": "./definitions/Shipment.json"
+  },
+  "ShipmentRelationship": {
+    "$ref": "./definitions/ShipmentRelationship.json"
   },
   "Status": {
     "$ref": "./definitions/Status.json"
