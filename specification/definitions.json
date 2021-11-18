@@ -1,4 +1,7 @@
 {
+  "BaseShipment": {
+    "$ref": "./definitions/BaseShipment.json"
+  },
   "CountryCode": {
     "$ref": "./definitions/CountryCode.json"
   },
@@ -7,6 +10,9 @@
   },
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
+  },
+  "ServiceRate": {
+    "$ref": "./definitions/ServiceRate.json"
   },
   "Shipment": {
     "$ref": "./definitions/Shipment.json"
