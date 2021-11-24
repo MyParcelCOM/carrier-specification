@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes",
+    "relationships"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/Manifest.json"
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "name",
+        "files"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "my-manifest"
+        },
+        "files": {
+          "readOnly": true,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "resource_type",
+              "data"
+            ],
+            "properties": {
+              "resource_type": {
+                "$ref": "../includes/resource-type.json"
+              },
+              "mime_type": {
+                "type": "string",
+                "example": "application/pdf"
+              },
+              "extension": {
+                "type": "string",
+                "example": "pdf"
+              },
+              "data": {
+                "type": "string",
+                "example": "iVBORw0KTaIx+wMm04spN/rQWAAAAABJRU5ErkJggg=="
+              }
+            }
+          }
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "required": [
+        "shipments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "shipments": {
+          "$ref": "#/definitions/ShipmentRelationship"
+        }
+      }
+    }
+  }
+}

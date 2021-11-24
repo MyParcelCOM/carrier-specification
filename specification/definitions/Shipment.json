@@ -326,13 +326,7 @@
             ],
             "properties": {
               "resource_type": {
-                "type": "string",
-                "enum": [
-                  "label",
-                  "printcode",
-                  "invoice"
-                ],
-                "example": "label"
+                "$ref": "../includes/resource-type.json"
               },
               "mime_type": {
                 "type": "string",
