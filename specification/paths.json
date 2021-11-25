@@ -2,7 +2,7 @@
   "/get-service-rates": {
     "$ref": "./paths/ServiceRates.json"
   },
-  "/manifest": {
+  "/manifests": {
     "$ref": "./paths/Manifests.json"
   },
   "/multi-colli-shipments": {
