@@ -13,8 +13,7 @@
     "attributes": {
       "type": "object",
       "required": [
-        "name",
-        "files"
+        "name"
       ],
       "properties": {
         "name": {
