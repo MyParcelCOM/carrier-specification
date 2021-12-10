@@ -36,10 +36,7 @@
           "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Manifest"
-              }
+              "$ref": "#/definitions/Manifest"
             }
           }
         }
