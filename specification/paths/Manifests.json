@@ -28,21 +28,17 @@
     "responses": {
       "201": {
         "description": "Created the manifest.",
-        "content": {
-          "application/vnd.api+json": {
-            "schema": {
-              "type": "object",
-              "required": [
-                "data"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "data": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Manifest"
-                  }
-                }
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Manifest"
               }
             }
           }
