@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^pickup-dropoff-locations$",
+      "example": "pickup-dropoff-locations"
+    },
+    "id": {
+      "type": "string",
+      "example": "8008135",
+      "description": "Location identifier used by the carrier."
+    }
+  }
+}

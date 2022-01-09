@@ -5,67 +5,89 @@
     ],
     "summary": "Create a multi-colli shipment.",
     "description": "This endpoint creates a new multi-colli shipment in the system of the carrier.",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "Multi-colli shipment",
-        "description": "The virtual master shipment and colli shipments to be created as one multi-colli shipment.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "object",
-              "properties": {
-                "master": {
-                  "$ref": "#/definitions/Shipment"
-                },
-                "colli": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Shipment"
-                  }
-                }
-              }
-            },
-            "meta": {
-              "type": "object",
-              "properties": {
-                "track_trace": {
-                  "type": "object",
-                  "properties": {
-                    "enabled": {
-                      "type": "boolean",
-                      "description": "Indicates whether or not the carrier should send track and trace emails for this shipment.",
-                      "example": false,
-                      "default": true
+    "requestBody": {
+      "description": "The virtual master shipment and colli shipments to be created as one multi-colli shipment.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "master": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ShipmentResponse"
+                      },
+                      {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "colli": {
+                    "type": "array",
+                    "items": {
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/ShipmentResponse"
+                        },
+                        {
+                          "properties": {
+                            "id": {
+                              "readOnly": true
+                            }
+                          }
+                        }
+                      ]
                     }
                   }
-                },
-                "label": {
-                  "type": "object",
-                  "properties": {
-                    "mime_type": {
-                      "type": "string",
-                      "example": "application/pdf",
-                      "default": "application/pdf",
-                      "description": "Requested `mime-type` for the label of this shipment."
-                    },
-                    "size": {
-                      "type": "string",
-                      "example": "A6",
-                      "default": "A6",
-                      "description": "Requested size for the label of this shipment."
-                    },
-                    "print_sku_on_label": {
-                      "type": "boolean",
-                      "description": "Indicates whether or not to display SKU information table on the label.",
-                      "example": true,
-                      "default": false
+                }
+              },
+              "meta": {
+                "type": "object",
+                "properties": {
+                  "track_trace": {
+                    "type": "object",
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean",
+                        "description": "Indicates whether or not the carrier should send track and trace emails for this shipment.",
+                        "example": false,
+                        "default": true
+                      }
+                    }
+                  },
+                  "label": {
+                    "type": "object",
+                    "properties": {
+                      "mime_type": {
+                        "type": "string",
+                        "example": "application/pdf",
+                        "default": "application/pdf",
+                        "description": "Requested `mime-type` for the label of this shipment."
+                      },
+                      "size": {
+                        "type": "string",
+                        "example": "A6",
+                        "default": "A6",
+                        "description": "Requested size for the label of this shipment."
+                      },
+                      "print_sku_on_label": {
+                        "type": "boolean",
+                        "description": "Indicates whether or not to display SKU information table on the label.",
+                        "example": true,
+                        "default": false
+                      }
                     }
                   }
                 }
@@ -74,27 +96,31 @@
           }
         }
       }
-    ],
+    },
     "responses": {
       "201": {
         "description": "The shipment has been created.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
               "properties": {
-                "master": {
-                  "$ref": "#/definitions/Shipment"
-                },
-                "colli": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Shipment"
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "master": {
+                      "$ref": "#/components/schemas/ShipmentResponse"
+                    },
+                    "colli": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShipmentResponse"
+                      }
+                    }
                   }
                 }
               }

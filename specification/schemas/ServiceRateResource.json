@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^service-rates$",
+      "example": "service-rates"
+    },
+    "id": {
+      "type": "string",
+      "example": "09a8f83a-bc8d-4598-81e6-ebf9d59a186a",
+      "description": "Service rate identifier used by the carrier."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^shipments$",
+      "example": "shipments"
+    },
+    "id": {
+      "type": "string",
+      "example": "ec234f21-f350-405f-bf02-1c45d1c792e7",
+      "description": "Shipment identifier used by the carrier."
+    }
+  }
+}

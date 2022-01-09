@@ -1,0 +1,26 @@
+{
+  "path-country_code": {
+    "$ref": "./parameters/path-country_code.json"
+  },
+  "path-postal_code": {
+    "$ref": "./parameters/path-postal_code.json"
+  },
+  "path-shipment_id": {
+    "$ref": "./parameters/path-shipment_id.json"
+  },
+  "path-tracking_code": {
+    "$ref": "./parameters/path-tracking_code.json"
+  },
+  "query-city": {
+    "$ref": "./parameters/query-city.json"
+  },
+  "query-filter-categories": {
+    "$ref": "./parameters/query-filter-categories.json"
+  },
+  "query-street": {
+    "$ref": "./parameters/query-street.json"
+  },
+  "query-street_number": {
+    "$ref": "./parameters/query-street_number.json"
+  }
+}

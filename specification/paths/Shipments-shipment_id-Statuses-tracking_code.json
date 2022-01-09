@@ -7,69 +7,65 @@
     "description": "This endpoint retrieves statuses for the supplied shipment. It gives a complete list of all status changes since the shipment was created.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shipment_id",
-        "type": "string",
-        "required": true,
-        "description": "Identifier which has been returned in the shipment POST request."
+        "$ref": "#/components/parameters/path-shipment_id"
       },
       {
-        "in": "path",
-        "name": "tracking_code",
-        "type": "string",
-        "required": true,
-        "description": "Tracking code which has been returned in the shipment POST request."
+        "$ref": "#/components/parameters/path-tracking_code"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the statuses.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Status"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
               "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StatusResponse"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses/3SABCD0123456789?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses/3SABCD0123456789?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses/3SABCD0123456789?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses/3SABCD0123456789?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "https://api.carrier.com/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses/3SABCD0123456789?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }

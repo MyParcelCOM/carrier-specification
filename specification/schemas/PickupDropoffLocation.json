@@ -1,0 +1,94 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/PickupDropoffLocationResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "categories": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "pick-up",
+                  "drop-off"
+                ]
+              }
+            },
+            "address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "opening_hours": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "day": {
+                    "type": "string",
+                    "enum": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday"
+                    ]
+                  },
+                  "open": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Time"
+                      },
+                      {
+                        "example": "08:30"
+                      }
+                    ]
+                  },
+                  "closed": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Time"
+                      },
+                      {
+                        "example": "19:00"
+                      }
+                    ]
+                  }
+                }
+              },
+              "maxItems": 7
+            },
+            "position": {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number",
+                  "example": 52.3050097
+                },
+                "longitude": {
+                  "type": "number",
+                  "example": 4.689905
+                }
+              }
+            }
+          }
+        },
+        "meta": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "integer",
+              "example": 1337,
+              "description": "Distance from the specified postal code to the location in meters."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

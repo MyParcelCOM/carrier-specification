@@ -1,0 +1,8 @@
+{
+  "name": "street",
+  "in": "query",
+  "description": "Street name of the address to search nearby.",
+  "schema": {
+    "type": "string"
+  }
+}

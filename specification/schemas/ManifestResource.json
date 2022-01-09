@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^manifests$",
+      "example": "manifests"
+    },
+    "id": {
+      "type": "string",
+      "example": "ce7f6752-34e0-49a1-a832-bcc209450ea8",
+      "description": "Manifest identifier used by the carrier."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^statuses$",
+      "example": "statuses"
+    },
+    "id": {
+      "type": "string",
+      "example": "B01",
+      "description": "Status identifier used by the carrier."
+    }
+  }
+}

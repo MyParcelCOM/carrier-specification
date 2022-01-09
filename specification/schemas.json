@@ -1,0 +1,110 @@
+{
+  "Barcode": {
+    "$ref": "./schemas/Barcode.json"
+  },
+  "BaseAddress": {
+    "$ref": "./schemas/BaseAddress.json"
+  },
+  "BaseCustoms": {
+    "$ref": "./schemas/BaseCustoms.json"
+  },
+  "BasePhysicalProperties": {
+    "$ref": "./schemas/BasePhysicalProperties.json"
+  },
+  "BasePrice": {
+    "$ref": "./schemas/BasePrice.json"
+  },
+  "BaseShipmentItem": {
+    "$ref": "./schemas/BaseShipmentItem.json"
+  },
+  "ColloNumber": {
+    "$ref": "./schemas/ColloNumber.json"
+  },
+  "CountryCode": {
+    "$ref": "./schemas/CountryCode.json"
+  },
+  "Currency": {
+    "$ref": "./schemas/Currency.json"
+  },
+  "Email": {
+    "$ref": "./schemas/Email.json"
+  },
+  "Error": {
+    "$ref": "./schemas/Error.json"
+  },
+  "File": {
+    "$ref": "./schemas/File.json"
+  },
+  "Manifest": {
+    "$ref": "./schemas/Manifest.json"
+  },
+  "ManifestResource": {
+    "$ref": "./schemas/ManifestResource.json"
+  },
+  "ManifestResponse": {
+    "$ref": "./schemas/ManifestResponse.json"
+  },
+  "PaginationMeta": {
+    "$ref": "./schemas/PaginationMeta.json"
+  },
+  "PickupDropoffLocation": {
+    "$ref": "./schemas/PickupDropoffLocation.json"
+  },
+  "PickupDropoffLocationResource": {
+    "$ref": "./schemas/PickupDropoffLocationResource.json"
+  },
+  "PickupDropoffLocationResponse": {
+    "$ref": "./schemas/PickupDropoffLocationResponse.json"
+  },
+  "Price": {
+    "$ref": "./schemas/Price.json"
+  },
+  "PriceAmount": {
+    "$ref": "./schemas/PriceAmount.json"
+  },
+  "ServiceRate": {
+    "$ref": "./schemas/ServiceRate.json"
+  },
+  "ServiceRateResource": {
+    "$ref": "./schemas/ServiceRateResource.json"
+  },
+  "ServiceRateResponse": {
+    "$ref": "./schemas/ServiceRateResponse.json"
+  },
+  "Shipment": {
+    "$ref": "./schemas/Shipment.json"
+  },
+  "ShipmentResource": {
+    "$ref": "./schemas/ShipmentResource.json"
+  },
+  "ShipmentResponse": {
+    "$ref": "./schemas/ShipmentResponse.json"
+  },
+  "ShipmentsRelationship": {
+    "$ref": "./schemas/ShipmentsRelationship.json"
+  },
+  "StateCode": {
+    "$ref": "./schemas/StateCode.json"
+  },
+  "Status": {
+    "$ref": "./schemas/Status.json"
+  },
+  "StatusResource": {
+    "$ref": "./schemas/StatusResource.json"
+  },
+  "StatusResponse": {
+    "$ref": "./schemas/StatusResponse.json"
+  },
+  "TaxIdentificationNumber": {
+    "$ref": "./schemas/TaxIdentificationNumber.json"
+  },
+  "Time": {
+    "$ref": "./schemas/Time.json"
+  },
+  "TrackingCode": {
+    "$ref": "./schemas/TrackingCode.json"
+  },
+  "TrackingUrl": {
+    "$ref": "./schemas/TrackingUrl.json"
+  }
+}

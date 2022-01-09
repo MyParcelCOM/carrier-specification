@@ -1,0 +1,20 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ServiceRate"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "price",
+            "purchase_price"
+          ]
+        }
+      }
+    }
+  ]
+}

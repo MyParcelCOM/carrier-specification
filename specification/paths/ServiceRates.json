@@ -4,41 +4,88 @@
       "ServiceRates"
     ],
     "summary": "Get service rates for a shipment",
-    "description": "This endpoint retrieves service rates of the carrier based on the supplied shipment.",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "shipment",
-        "description": "The shipment object to be created.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/BaseShipment"
+    "description": "This endpoint retrieves service rates from the carrier based on the supplied shipment.",
+    "requestBody": {
+      "description": "The shipment object.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "type",
+                      "attributes"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "recipient_address",
+                          "sender_address",
+                          "physical_properties"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "200": {
         "description": "Retrieved the service rates.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ServiceRate"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceRateResponse"
+                  }
+                }
               }
             }
           }

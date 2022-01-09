@@ -1,0 +1,43 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/PickupDropoffLocation"
+    },
+    {
+      "required": [
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "categories",
+            "address"
+          ],
+          "properties": {
+            "address": {
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ]
+            },
+            "opening_hours": {
+              "items": {
+                "required": [
+                  "day"
+                ]
+              }
+            },
+            "position": {
+              "required": [
+                "latitude",
+                "longitude"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 echo -e "\033[0;30;47m Starting containers \033[0m"
-${COMPOSE} up -d carrier-specification
-./mp.sh  bundle
 
-echo -e "\033[0;30;47m ReDoc running on \033[0m https://carrier-specification.localhost.private"
+${COMPOSE} up -d carrier-specification
+./mp.sh bundle
+
+echo -e "\033[0;30;47m Redoc running on \033[0m https://carrier-specification.localhost.private"

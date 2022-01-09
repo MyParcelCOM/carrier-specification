@@ -1,0 +1,34 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/StatusResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "myparcelcom_code": {
+              "type": "string",
+              "example": "shipment-registered",
+              "description": "Status code used by MyParcel.com"
+            },
+            "description": {
+              "type": "string",
+              "example": "Confirmed at destination",
+              "description": "Description of the carrier status."
+            },
+            "timestamp": {
+              "type": "integer",
+              "example": 1504801719,
+              "description": "Unix timestamp (UTC) of the status update."
+            },
+            "physical_properties": {
+              "$ref": "#/components/schemas/BasePhysicalProperties"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
