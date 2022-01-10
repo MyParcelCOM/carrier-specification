@@ -13,12 +13,24 @@
     "attributes": {
       "type": "object",
       "required": [
-        "name"
+        "name",
+        "address"
       ],
       "properties": {
         "name": {
           "type": "string",
           "example": "my-manifest"
+        },
+        "address": {
+          "type": "object",
+          "required": [
+            "street_1",
+            "city",
+            "country_code"
+          ],
+          "properties": {
+            "$ref": "../properties/Address.json"
+          }
         },
         "files": {
           "readOnly": true,
