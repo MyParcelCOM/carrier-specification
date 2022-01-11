@@ -5,7 +5,7 @@
   },
   "servers": [
     {
-      "url": "localhost"
+      "url": "https://carrier.myparcel.com"
     }
   ],
   "paths": {
