@@ -149,6 +149,9 @@
           "type": "string",
           "example": "https://tracker.carrier.com/ASD2KUIAF235"
         },
+        "final_mile_carrier": {
+          "$ref": "../includes/final-mile-carrier.json"
+        },
         "service": {
           "type": "object",
           "required": [
