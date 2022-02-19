@@ -353,6 +353,15 @@
           "description": "A number identifying this collo in a multi-colli shipment."
         }
       }
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "consolidated_shipments": {
+          "$ref": "#/definitions/ShipmentRelationship"
+        }
+      }
     }
   }
 }
