@@ -2,6 +2,12 @@
   "BaseShipment": {
     "$ref": "./definitions/BaseShipment.json"
   },
+  "CollectionRelationship": {
+    "$ref": "./definitions/CollectionRelationship.json"
+  },
+  "Collection": {
+    "$ref": "./definitions/Collection.json"
+  },
   "CountryCode": {
     "$ref": "./definitions/CountryCode.json"
   },
@@ -10,6 +16,9 @@
   },
   "Manifest": {
     "$ref": "./definitions/Manifest.json"
+  },
+  "MinimalCollection": {
+    "$ref": "./definitions/MinimalCollection.json"
   },
   "MinimalShipment": {
     "$ref": "./definitions/MinimalShipment.json"
