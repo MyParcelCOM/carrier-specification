@@ -319,32 +319,7 @@
           "description": "Name of the application used to create the shipment."
         },
         "files": {
-          "readOnly": true,
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "resource_type",
-              "data"
-            ],
-            "properties": {
-              "resource_type": {
-                "$ref": "../includes/resource-type.json"
-              },
-              "mime_type": {
-                "type": "string",
-                "example": "application/pdf"
-              },
-              "extension": {
-                "type": "string",
-                "example": "pdf"
-              },
-              "data": {
-                "type": "string",
-                "example": "iVBORw0KTaIx+wMm04spN/rQWAAAAABJRU5ErkJggg=="
-              }
-            }
-          }
+          "$ref": "../properties/Files.json"
         },
         "collo_number": {
           "readOnly": true,
@@ -360,6 +335,9 @@
       "properties": {
         "consolidated_shipments": {
           "$ref": "#/definitions/ShipmentRelationship"
+        },
+        "collection": {
+          "$ref": "#/definitions/CollectionRelationship"
         }
       }
     }

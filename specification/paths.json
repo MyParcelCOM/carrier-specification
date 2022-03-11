@@ -1,4 +1,10 @@
 {
+  "/collections": {
+    "$ref": "./paths/Collections.json"
+  },
+  "/collections/{collection_id}": {
+    "$ref": "./paths/Collections-collection_id.json"
+  },
   "/get-service-rates": {
     "$ref": "./paths/ServiceRates.json"
   },
