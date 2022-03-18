@@ -3,8 +3,8 @@
     "tags": [
       "PickupDropoffLocations"
     ],
-    "summary": "Get all the pick-up and drop-off locations.",
-    "description": "This endpoint retrieves pick-up and drop-off locations offered by the carrier. These locations can be used as `pickup_location` of a shipment.",
+    "summary": "Get all the pick-up and drop-off locations by country and postal code.",
+    "description": "This endpoint retrieves pick-up and drop-off locations offered by the carrier by country and postal code. These locations can be used as `pickup_location` of a shipment.",
     "parameters": [
       {
         "in": "path",
