@@ -14,6 +14,9 @@
   "/multi-colli-shipments": {
     "$ref": "./paths/MultiColliShipments.json"
   },
+  "/pickup-dropoff-locations/{latitude}/{longitude}": {
+    "$ref": "./paths/PickupDropoffLocations-latitude-longitude.json"
+  },
   "/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/PickupDropoffLocations-country_code-postal_code.json"
   },
