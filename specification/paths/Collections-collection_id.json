@@ -97,10 +97,7 @@
                           "example": "TR4CKMYC0LL3CT10N"
                         },
                         "files": {
-                          "type": "array",
-                          "items": {
-                            "$ref": "../properties/Files.json"
-                          }
+                          "$ref": "../properties/Files.json"
                         }
                       }
                     }

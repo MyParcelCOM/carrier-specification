@@ -29,14 +29,14 @@
               ],
               "properties": {
                 "from": {
-                  "type": "string",
-                  "example": "12:00",
-                  "description": "24 hour formatted time string."
+                  "type": "number",
+                  "example": 1647878216,
+                  "description": "Unix timestamp (UTC) of the collection from time."
                 },
                 "to": {
-                  "type": "string",
-                  "example": "22:00",
-                  "description": "24 hour formatted time string."
+                  "type": "number",
+                  "example": 1647885414,
+                  "description": "Unix timestamp (UTC) of the collection to time."
                 }
               }
             },
