@@ -36,7 +36,7 @@
                     "number",
                     "string"
                   ],
-                  "example": "2022-03-22T09:00:00+01:00",
+                  "example": "2022-03-22T20:00:00+01:00",
                   "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
                 }
               }
