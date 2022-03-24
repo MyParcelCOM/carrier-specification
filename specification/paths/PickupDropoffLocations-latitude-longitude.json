@@ -1,0 +1,95 @@
+{
+  "get": {
+    "tags": [
+      "PickupDropoffLocations"
+    ],
+    "summary": "Get carrier office locations by geolocation.",
+    "description": "This endpoint retrieves pick-up and drop-off locations offered by the carrier by geolocation. These locations can be used as `pickup_location` of a shipment.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "latitude",
+        "required": true,
+        "type": "string",
+        "pattern": "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?)$",
+        "description": "Geolocation latitude."
+      },
+      {
+        "in": "path",
+        "name": "longitude",
+        "required": true,
+        "type": "string",
+        "pattern": "^[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$",
+        "description": "Geolocation longitude."
+      },
+      {
+        "in": "query",
+        "name": "filter[categories]",
+        "type": "string",
+        "description": "Comma separated list of location categories to return. Possible options are:<ul><li>`pick-up`</li><li>`drop-off`</li></ul>"
+      },
+      {
+        "in": "query",
+        "name": "filter[radius]",
+        "type": "integer",
+        "description": "Filters out office locations outside the specified radius (in meters)."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the locations.",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PickupDropoffLocation"
+              }
+            },
+            "meta": {
+              "$ref": "../includes/pagination-meta.json"
+            },
+            "links": {
+              "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/52.354078/4.903159?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/52.354078/4.903159?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/52.354078/4.903159?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/52.354078/4.903159?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "https://api.carrier.com/pickup-dropoff-locations/52.354078/4.903159?page[number]=13&page[size]=30"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
