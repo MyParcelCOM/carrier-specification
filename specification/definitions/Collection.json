@@ -16,11 +16,6 @@
               "type": "string",
               "example": "First collection"
             },
-            "collection_date": {
-              "type": "string",
-              "example": "2021-12-24",
-              "description": "Date string in ISO 8601 date format (YYYY-MM-DD)"
-            },
             "collection_time": {
               "type": "object",
               "required": [
@@ -29,14 +24,20 @@
               ],
               "properties": {
                 "from": {
-                  "type": "string",
-                  "example": "12:00",
-                  "description": "24 hour formatted time string."
+                  "type": [
+                    "number",
+                    "string"
+                  ],
+                  "example": 1647878216,
+                  "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
                 },
                 "to": {
-                  "type": "string",
-                  "example": "22:00",
-                  "description": "24 hour formatted time string."
+                  "type": [
+                    "number",
+                    "string"
+                  ],
+                  "example": "2022-03-22T20:00:00+01:00",
+                  "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
                 }
               }
             },

@@ -73,8 +73,7 @@
                 "$ref": "../includes/time.json"
               }
             }
-          },
-          "maxItems": 7
+          }
         },
         "position": {
           "type": "object",
