@@ -33,6 +33,11 @@
           "example": "Confirmed at destination",
           "description": "Description of the carrier status."
         },
+        "category": {
+          "type": "string",
+          "example": "default",
+          "description": "The category code of the status"
+        },
         "timestamp": {
           "type": "number",
           "example": 1504801719,
