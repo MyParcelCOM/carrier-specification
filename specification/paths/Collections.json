@@ -35,7 +35,6 @@
                       "required": [
                         "myparcelcom_collection_id",
                         "name",
-                        "collection_date",
                         "collection_time",
                         "address"
                       ]
@@ -76,7 +75,6 @@
                       "required": [
                         "myparcelcom_collection_id",
                         "name",
-                        "collection_date",
                         "collection_time",
                         "address"
                       ]
