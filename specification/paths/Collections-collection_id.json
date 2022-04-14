@@ -57,7 +57,7 @@
       }
     ],
     "responses": {
-      "201": {
+      "200": {
         "description": "Updated the collection.",
         "schema": {
           "type": "object",
