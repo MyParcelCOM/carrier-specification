@@ -57,7 +57,7 @@
       }
     ],
     "responses": {
-      "201": {
+      "200": {
         "description": "Updated the collection.",
         "schema": {
           "type": "object",
@@ -81,7 +81,6 @@
                       "required": [
                         "myparcelcom_collection_id",
                         "name",
-                        "collection_date",
                         "collection_time",
                         "address"
                       ],
