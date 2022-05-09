@@ -108,5 +108,29 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Collections"
+    ],
+    "summary": "Void a collection",
+    "description": "This endpoint is used to void collections. Not all carriers support voiding of registered shipments.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "collection_id",
+        "required": true,
+        "type": "string",
+        "description": "ID of the collection to be voided. Can differ from the `myparcelcom_collection_id` attribute!"
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": "The collection has been voided."
+      },
+      "423": {
+        "description": "This carrier does not support voiding registered collections."
+      }
+    }
   }
 }
