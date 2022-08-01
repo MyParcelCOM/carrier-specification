@@ -101,6 +101,14 @@
             ],
             "example": "print-label-in-store"
           }
+        },
+        "location_type": {
+          "type": "string",
+          "enum": [
+            "office",
+            "locker"
+          ],
+          "default": "office"
         }
       }
     },

@@ -49,6 +49,12 @@
         "name": "filter[features]",
         "type": "string",
         "description": "Comma separated list of features to filter the locations by. Possible options are:<ul><li>`print-label-in-store`</li></ul>"
+      },
+      {
+        "in": "query",
+        "name": "filter[location_type]",
+        "type": "string",
+        "description": "Comma separated list of location types to filter the locations by. Possible options are:<ul><li>`office`</li><li>locker</li></ul>"
       }
     ],
     "responses": {
