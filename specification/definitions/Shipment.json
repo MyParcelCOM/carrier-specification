@@ -132,7 +132,16 @@
             "string",
             "null"
           ],
-          "example": "order #8008135"
+          "example": "Fidget spinners",
+          "description": "Description of the shipment which may be put on the label."
+        },
+        "customer_reference": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "example": "#8008135",
+          "description": "Reference for the customer to recognize the shipment by."
         },
         "barcode": {
           "readOnly": true,
