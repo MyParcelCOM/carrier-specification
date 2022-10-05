@@ -34,7 +34,6 @@
                     "attributes": {
                       "required": [
                         "myparcelcom_collection_id",
-                        "name",
                         "collection_time",
                         "address"
                       ]
@@ -74,7 +73,6 @@
                     "attributes": {
                       "required": [
                         "myparcelcom_collection_id",
-                        "name",
                         "collection_time",
                         "address"
                       ]
