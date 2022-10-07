@@ -13,7 +13,11 @@
               "example": "6e287731-c391-4548-bc48-c09327e1e94f"
             },
             "name": {
-              "type": "string",
+              "deprecated": true,
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "First collection"
             },
             "collection_time": {
