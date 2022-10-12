@@ -1,4 +1,7 @@
 {
+  "/collection-time-slots/{country_code}/{postal_code}": {
+    "$ref": "./paths/CollectionTimeSlots-country_code-postal_code.json"
+  },
   "/collections": {
     "$ref": "./paths/Collections.json"
   },

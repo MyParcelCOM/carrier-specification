@@ -5,6 +5,9 @@
   "CollectionRelationship": {
     "$ref": "./definitions/CollectionRelationship.json"
   },
+  "CollectionTimeSlot": {
+    "$ref": "./definitions/CollectionTimeSlot.json"
+  },
   "Collection": {
     "$ref": "./definitions/Collection.json"
   },

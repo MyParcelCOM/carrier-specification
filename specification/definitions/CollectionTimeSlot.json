@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "id",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/CollectionTimeSlot.json"
+    },
+    "id": {
+      "readOnly": true,
+      "type": "string",
+      "example": "1648110600_1648114200",
+      "description": "The from and to timestamp separated by an underscore (_)."
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "from",
+        "to"
+      ],
+      "properties": {
+        "from": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "example": 1647878216,
+          "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
+        },
+        "to": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "example": "2022-03-22T20:00:00+01:00",
+          "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "distance": {
+          "type": "number",
+          "example": 1337,
+          "description": "Distance from the specified postal code to the location in meters."
+        }
+      }
+    }
+  }
+}
