@@ -3,7 +3,7 @@
     "tags": [
       "Collections"
     ],
-    "summary": "Create a collection",
+    "summary": "Create a collection.",
     "description": "This endpoint is used to create collections.",
     "parameters": [
       {

@@ -28,7 +28,7 @@
             "number",
             "string"
           ],
-          "example": 1647878216,
+          "example": "2022-03-24T09:30:00+01:00",
           "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
         },
         "to": {
@@ -36,18 +36,8 @@
             "number",
             "string"
           ],
-          "example": "2022-03-22T20:00:00+01:00",
+          "example": "2022-03-24T10:30:00+01:00",
           "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
-        }
-      }
-    },
-    "meta": {
-      "type": "object",
-      "properties": {
-        "distance": {
-          "type": "number",
-          "example": 1337,
-          "description": "Distance from the specified postal code to the location in meters."
         }
       }
     }
