@@ -43,7 +43,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the locations.",
+        "description": "Retrieved the collection time slots.",
         "schema": {
           "type": "object",
           "required": [
