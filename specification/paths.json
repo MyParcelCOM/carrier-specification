@@ -1,4 +1,7 @@
 {
+  "/collection-time-slots": {
+    "$ref": "./paths/CollectionTimeSlots.json"
+  },
   "/collections": {
     "$ref": "./paths/Collections.json"
   },
