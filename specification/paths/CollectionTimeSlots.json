@@ -39,6 +39,12 @@
           "string",
           "number"
         ]
+      },
+      {
+        "name": "service_code",
+        "in": "query",
+        "description": "Service code to limit the time slots by (required by some carriers).",
+        "type": "string"
       }
     ],
     "responses": {
