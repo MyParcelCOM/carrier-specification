@@ -5,3 +5,11 @@ ${COMPOSE} run --rm bundler bash -c "
 mkdir -p dist
 json-refs resolve schema.json -f > dist/swagger.json
 "
+
+echo -e "\033[0;30;47m Injecting vars \033[0m"
+# Escape "/" characters to avoid conflict with sed.
+RELEASE_VERSION=${RELEASE_VERSION//\//\\/}
+
+${COMPOSE} run --rm bundler bash -c "
+sed -i 's/\$RELEASE_VERSION/${RELEASE_VERSION}/' dist/swagger.json
+"
