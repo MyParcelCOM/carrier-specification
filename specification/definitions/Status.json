@@ -45,6 +45,11 @@
         },
         "physical_properties": {
           "$ref": "../includes/physical-properties.json"
+        },
+        "new_tracking_code": {
+          "type": "string",
+          "example": "3SAAA0123456789",
+          "description": "New tracking code received by the carrier for future tracking of this shipment."
         }
       }
     }
