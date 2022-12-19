@@ -47,6 +47,15 @@
                           "description": "Indicates whether the collection should be registered at the carrier."
                         }
                       }
+                    },
+                    "relationships": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "shipments": {
+                          "$ref": "#/definitions/ShipmentRelationship"
+                        }
+                      }
                     }
                   }
                 }
@@ -96,6 +105,15 @@
                         },
                         "files": {
                           "$ref": "../properties/Files.json"
+                        }
+                      }
+                    },
+                    "relationships": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "shipments": {
+                          "$ref": "#/definitions/ShipmentRelationship"
                         }
                       }
                     }
