@@ -226,6 +226,18 @@
                 "example": 1000,
                 "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
               },
+              "item_weight_unit": {
+                "type": "string",
+                "enum": [
+                  "mg",
+                  "g",
+                  "kg",
+                  "lb",
+                  "oz"
+                ],
+                "example": "g",
+                "description": "Unit of measurement for item_weight."
+              },
               "quantity": {
                 "type": "number",
                 "example": 2
