@@ -248,6 +248,11 @@
                 "example": "8517.12.00",
                 "description": "Harmonized System code used by customs."
               },
+              "is_preferential_origin": {
+                "type": "boolean",
+                "default": false,
+                "example": false
+              },
               "origin_country_code": {
                 "$ref": "#/definitions/CountryCode"
               },
