@@ -173,7 +173,7 @@
             "properties": {
               "code": {
                 "type": "string",
-                "example": "delivery-day:sunday"
+                "example": "delivery-window:sunday"
               },
               "name": {
                 "type": "string",
