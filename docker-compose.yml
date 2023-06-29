@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/opt/spec
 
-  redoc:
+  carrier-specification:
     build:
       context: .
       dockerfile: docker/build/Dockerfile
@@ -23,11 +23,17 @@ services:
     environment:
       SPEC_URL: /dist/swagger.json
       PAGE_FAVICON: favicon-16x16.png
-    ports:
-      - ${REDOC_PORT}:80
+    expose:
+      - 80
+    networks:
+      - proxynet
 
   validator:
     image: swaggerapi/swagger-validator
     working_dir: /opt/spec
     volumes:
       - ./dist:/opt/spec
+
+networks:
+  proxynet:
+    external: true
