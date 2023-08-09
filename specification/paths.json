@@ -17,6 +17,9 @@
   "/multi-colli-shipments": {
     "$ref": "./paths/MultiColliShipments.json"
   },
+  "/pickup-dropoff-locations/{pudo_id}": {
+    "$ref": "./paths/PickupDropoffLocations-pudo_id.json"
+  },
   "/pickup-dropoff-locations/{latitude}/{longitude}": {
     "$ref": "./paths/PickupDropoffLocations-latitude-longitude.json"
   },
