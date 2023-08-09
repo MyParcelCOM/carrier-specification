@@ -1,0 +1,29 @@
+{
+  "get": {
+    "tags": [
+      "PickupDropoffLocations"
+    ],
+    "summary": "Get a carrier office location by ID.",
+    "description": "This endpoint retrieves the pick-up and drop-off location with the supplied ID.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "pudo_id",
+        "required": true,
+        "type": "string",
+        "description": "Location identifier used by the carrier."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the location.",
+        "schema": {
+          "$ref": "#/definitions/PickupDropoffLocation"
+        }
+      },
+      "404": {
+        "description": "No location was found for the given ID."
+      }
+    }
+  }
+}
