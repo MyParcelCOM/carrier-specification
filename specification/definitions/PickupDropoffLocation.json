@@ -121,6 +121,21 @@
           "description": "Distance from the specified postal code to the location in meters."
         }
       }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "url",
+          "example": "https://api.carrier.com/pickup-dropoff-locations/8008135"
+        }
+      }
     }
   }
 }
