@@ -11,91 +11,105 @@
         "in": "query",
         "description": "Country code in ISO 3166-1 alpha-2 format.",
         "required": true,
-        "type": "string"
+        "schema": {
+          "type": "string"
+        }
       },
       {
         "name": "postal_code",
         "in": "query",
         "description": "Postal code of the address to search nearby.",
         "required": true,
-        "type": "string"
+        "schema": {
+          "type": "string"
+        }
       },
       {
         "name": "date_from",
         "in": "query",
         "description": "Date string in ISO 8601 format or unix timestamp.",
         "required": true,
-        "type": [
-          "string",
-          "number"
-        ]
+        "schema": {
+          "type": [
+            "string",
+            "number"
+          ]
+        }
       },
       {
         "name": "date_to",
         "in": "query",
         "description": "Date string in ISO 8601 format or unix timestamp.",
         "required": true,
-        "type": [
-          "string",
-          "number"
-        ]
+        "schema": {
+          "type": [
+            "string",
+            "number"
+          ]
+        }
       },
       {
         "name": "service_code",
         "in": "query",
         "description": "Service code to limit the time slots by (required by some carriers).",
-        "type": "string"
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the collection time slots.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/CollectionTimeSlot"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
               "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CollectionTimeSlotResponse"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "https://api.carrier.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "https://carrier.myparcel.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "https://carrier.myparcel.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "https://carrier.myparcel.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "https://carrier.myparcel.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "https://carrier.myparcel.com/collection-time-slots?country_code=NL&postal_code=1234AB&date_from=1648110600&date_to=1648114200&page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }

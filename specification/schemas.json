@@ -17,6 +17,27 @@
   "BaseShipmentItem": {
     "$ref": "./schemas/BaseShipmentItem.json"
   },
+  "Collection": {
+    "$ref": "./schemas/Collection.json"
+  },
+  "CollectionRelationship": {
+    "$ref": "./schemas/CollectionRelationship.json"
+  },
+  "CollectionResource": {
+    "$ref": "./schemas/CollectionResource.json"
+  },
+  "CollectionResponse": {
+    "$ref": "./schemas/CollectionResponse.json"
+  },
+  "CollectionTimeSlot": {
+    "$ref": "./schemas/CollectionTimeSlot.json"
+  },
+  "CollectionTimeSlotResource": {
+    "$ref": "./schemas/CollectionTimeSlotResource.json"
+  },
+  "CollectionTimeSlotResponse": {
+    "$ref": "./schemas/CollectionTimeSlotResponse.json"
+  },
   "ColloNumber": {
     "$ref": "./schemas/ColloNumber.json"
   },
@@ -34,6 +55,9 @@
   },
   "File": {
     "$ref": "./schemas/File.json"
+  },
+  "FinalMileCarrier": {
+    "$ref": "./schemas/FinalMileCarrier.json"
   },
   "Manifest": {
     "$ref": "./schemas/Manifest.json"

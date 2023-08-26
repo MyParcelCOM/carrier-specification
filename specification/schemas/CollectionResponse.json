@@ -1,0 +1,33 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Collection"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "myparcelcom_collection_id",
+            "collection_time",
+            "address"
+          ],
+          "properties": {
+            "address": {
+              "required": [
+                "street_1",
+                "city",
+                "country_code",
+                "first_name",
+                "last_name"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

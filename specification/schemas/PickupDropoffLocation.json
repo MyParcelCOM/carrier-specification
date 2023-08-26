@@ -75,6 +75,23 @@
                   "example": 4.689905
                 }
               }
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "print-label-in-store"
+                ]
+              }
+            },
+            "location_type": {
+              "type": "string",
+              "enum": [
+                "office",
+                "locker"
+              ],
+              "default": "office"
             }
           }
         },

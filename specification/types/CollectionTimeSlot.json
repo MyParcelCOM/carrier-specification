@@ -1,5 +1,0 @@
-{
-  "type": "string",
-  "pattern": "^collection-time-slots$",
-  "example": "collection-time-slots"
-}

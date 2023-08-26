@@ -1,0 +1,61 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/CollectionResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "myparcelcom_collection_id": {
+              "type": "string",
+              "example": "6e287731-c391-4548-bc48-c09327e1e94f"
+            },
+            "name": {
+              "deprecated": true,
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "First collection"
+            },
+            "collection_time": {
+              "type": "object",
+              "required": [
+                "from",
+                "to"
+              ],
+              "properties": {
+                "from": {
+                  "type": [
+                    "number",
+                    "string"
+                  ],
+                  "example": 1647878216,
+                  "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
+                },
+                "to": {
+                  "type": [
+                    "number",
+                    "string"
+                  ],
+                  "example": "2022-03-22T20:00:00+01:00",
+                  "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
+                }
+              }
+            },
+            "address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "created_at": {
+              "type": "integer",
+              "example": 1504801719
+            }
+          }
+        }
+      }
+    }
+  ]
+}

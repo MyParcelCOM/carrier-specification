@@ -76,8 +76,16 @@
                 "string",
                 "null"
               ],
-              "example": "order #8008135",
+              "example": "Fidget spinners",
               "description": "Description of the shipment (contents). This may be put on the shipment's label."
+            },
+            "customer_reference": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "#8008135",
+              "description": "Reference for the customer to recognize the shipment by."
             },
             "barcode": {
               "$ref": "#/components/schemas/Barcode"
@@ -87,6 +95,9 @@
             },
             "tracking_url": {
               "$ref": "#/components/schemas/TrackingUrl"
+            },
+            "final_mile_carrier": {
+              "$ref": "#/components/schemas/FinalMileCarrier"
             },
             "service": {
               "type": "object",
@@ -108,7 +119,7 @@
                 "properties": {
                   "code": {
                     "type": "string",
-                    "example": "delivery-day:sunday"
+                    "example": "delivery-window:sunday"
                   },
                   "name": {
                     "type": "string",
@@ -155,6 +166,18 @@
             },
             "collo_number": {
               "$ref": "#/components/schemas/ColloNumber"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "consolidated_shipments": {
+              "$ref": "#/components/schemas/ShipmentsRelationship"
+            },
+            "collection": {
+              "$ref": "#/components/schemas/CollectionRelationship"
             }
           }
         }

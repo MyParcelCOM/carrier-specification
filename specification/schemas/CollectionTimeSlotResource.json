@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^collection-time-slots$",
+      "example": "collection-time-slots"
+    },
+    "id": {
+      "type": "string",
+      "example": "1648110600_1648114200",
+      "description": "The from and to timestamp separated by an underscore (_)."
+    }
+  }
+}

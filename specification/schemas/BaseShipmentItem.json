@@ -20,7 +20,19 @@
     "item_weight": {
       "type": "integer",
       "example": 1000,
-      "description": "Weight in grams of a single item within item resource. Should be multiplied by quantity to get total weight."
+      "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
+    },
+    "item_weight_unit": {
+      "type": "string",
+      "enum": [
+        "mg",
+        "g",
+        "kg",
+        "lb",
+        "oz"
+      ],
+      "example": "g",
+      "description": "Unit of measurement for item_weight."
     },
     "quantity": {
       "type": "integer",
@@ -31,6 +43,11 @@
       "pattern": "^[0-9.]+$",
       "example": "8517.12.00",
       "description": "Harmonized System code used by customs."
+    },
+    "is_preferential_origin": {
+      "type": "boolean",
+      "default": false,
+      "example": false
     },
     "origin_country_code": {
       "$ref": "#/components/schemas/CountryCode"

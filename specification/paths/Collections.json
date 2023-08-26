@@ -3,83 +3,76 @@
     "tags": [
       "Collections"
     ],
-    "summary": "Create a collection.",
-    "description": "This endpoint is used to create collections.",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "collection",
-        "description": "The collection object to be created.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "allOf": [
-                {
-                  "$ref": "#/definitions/Collection"
-                },
-                {
-                  "required": [
-                    "attributes"
-                  ],
-                  "properties": {
-                    "id": {
-                      "readOnly": true
-                    },
-                    "attributes": {
-                      "required": [
-                        "myparcelcom_collection_id",
-                        "collection_time",
-                        "address"
-                      ]
+    "summary": "Create a new collection.",
+    "description": "This endpoint creates a new collection with the posted data.",
+    "requestBody": {
+      "description": "The collection object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Collection"
+                  },
+                  {
+                    "required": [
+                      "attributes"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "myparcelcom_collection_id",
+                          "collection_time",
+                          "address"
+                        ],
+                        "properties": {
+                          "address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code",
+                              "first_name",
+                              "last_name"
+                            ]
+                          }
+                        }
+                      }
                     }
                   }
-                }
-              ]
+                ]
+              }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "201": {
-        "description": "Created the collection.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "allOf": [
-                {
-                  "$ref": "#/definitions/Collection"
-                },
-                {
-                  "required": [
-                    "id",
-                    "attributes"
-                  ],
-                  "properties": {
-                    "id": {
-                      "readOnly": true
-                    },
-                    "attributes": {
-                      "required": [
-                        "myparcelcom_collection_id",
-                        "collection_time",
-                        "address"
-                      ]
-                    }
-                  }
+        "description": "The collection has been created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/CollectionResponse"
                 }
-              ]
+              }
             }
           }
         }

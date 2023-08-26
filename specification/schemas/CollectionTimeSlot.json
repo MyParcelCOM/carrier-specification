@@ -1,0 +1,33 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/CollectionTimeSlotResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "from": {
+              "type": [
+                "number",
+                "string"
+              ],
+              "example": "2022-03-24T09:30:00+01:00",
+              "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
+            },
+            "to": {
+              "type": [
+                "number",
+                "string"
+              ],
+              "example": "2022-03-24T10:30:00+01:00",
+              "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

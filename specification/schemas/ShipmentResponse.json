@@ -5,7 +5,7 @@
     },
     {
       "required": [
-        "type",
+        "id",
         "attributes"
       ],
       "properties": {

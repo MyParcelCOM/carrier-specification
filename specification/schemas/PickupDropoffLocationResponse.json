@@ -5,7 +5,7 @@
     },
     {
       "required": [
-        "type",
+        "id",
         "attributes"
       ],
       "properties": {
@@ -34,6 +34,21 @@
                 "latitude",
                 "longitude"
               ]
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "https://carrier.myparcel.com/pickup-dropoff-locations/8008135"
             }
           }
         }

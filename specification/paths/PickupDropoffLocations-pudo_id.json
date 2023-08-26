@@ -1,24 +1,30 @@
 {
+  "parameters": [
+    {
+      "name": "pudo_id",
+      "in": "path",
+      "description": "Location identifier used by the carrier.",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
   "get": {
     "tags": [
       "PickupDropoffLocations"
     ],
     "summary": "Get a carrier office location by ID.",
     "description": "This endpoint retrieves the pick-up and drop-off location with the supplied ID.",
-    "parameters": [
-      {
-        "in": "path",
-        "name": "pudo_id",
-        "required": true,
-        "type": "string",
-        "description": "Location identifier used by the carrier."
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the location.",
-        "schema": {
-          "$ref": "#/definitions/PickupDropoffLocation"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "$ref": "#/components/schemas/PickupDropoffLocationResponse"
+            }
+          }
         }
       },
       "404": {
