@@ -20,12 +20,90 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ShipmentResponse"
+                    "$ref": "#/components/schemas/Shipment"
                   },
                   {
+                    "required": [
+                      "attributes"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "myparcelcom_shipment_id",
+                          "recipient_address",
+                          "return_address",
+                          "sender_address",
+                          "service",
+                          "physical_properties"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "return_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "pickup_location": {
+                            "required": [
+                              "code",
+                              "address"
+                            ],
+                            "properties": {
+                              "address": {
+                                "required": [
+                                  "street_1",
+                                  "city",
+                                  "country_code"
+                                ]
+                              }
+                            }
+                          },
+                          "service": {
+                            "required": [
+                              "code"
+                            ]
+                          },
+                          "options": {
+                            "items": {
+                              "required": [
+                                "code"
+                              ]
+                            }
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          },
+                          "items": {
+                            "items": {
+                              "required": [
+                                "description",
+                                "quantity"
+                              ]
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -101,7 +179,20 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShipmentResponse"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ShipmentResponse"
+                    },
+                    {
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "files"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }

@@ -190,7 +190,21 @@
                     "colli": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/ShipmentResponse"
+                        "allOf": [
+                          {
+                            "$ref": "#/components/schemas/ShipmentResponse"
+                          },
+                          {
+                            "properties": {
+                              "attributes": {
+                                "required": [
+                                  "files",
+                                  "collo_number"
+                                ]
+                              }
+                            }
+                          }
+                        ]
                       }
                     }
                   }
