@@ -5,7 +5,7 @@ WORKDIR /build
 
 RUN npm install -g json-refs \
     && mkdir -p dist \
-    && json-refs resolve root.json -f > dist/swagger.template.json
+    && json-refs resolve schema.json -f > dist/swagger.template.json
 
 FROM redocly/redoc:v2.0.0
 
