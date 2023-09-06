@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "merchandise",
+        "sample_merchandise",
+        "returned_merchandise",
+        "gifts",
+        "documents"
+      ]
+    },
+    "invoice_number": {
+      "type": "string",
+      "description": "Required when `content_type` is either `merchandise`, `sample_merchandise` or `returned_merchandise`.",
+      "example": "9000"
+    },
+    "non_delivery": {
+      "type": "string",
+      "enum": [
+        "return",
+        "abandon"
+      ],
+      "description": "Action when the parcel cannot be delivered."
+    },
+    "incoterm": {
+      "type": "string",
+      "enum": [
+        "DAP",
+        "DDP"
+      ],
+      "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid)."
+    },
+    "shipping_value": {
+      "$ref": "#/components/schemas/Price"
+    },
+    "total_tax": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
+        {
+          "readOnly": true
+        }
+      ]
+    },
+    "total_duty": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
+        {
+          "readOnly": true
+        }
+      ]
+    }
+  }
+}

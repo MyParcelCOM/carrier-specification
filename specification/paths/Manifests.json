@@ -3,40 +3,79 @@
     "tags": [
       "Manifests"
     ],
-    "summary": "Create a manifest",
-    "description": "This endpoint is used to create manifests.",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "manifest",
-        "description": "The manifest object to be created.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Manifest"
+    "summary": "Create a new manifest.",
+    "description": "This endpoint creates a new manifest with the posted data.",
+    "requestBody": {
+      "description": "The manifest object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Manifest"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name",
+                          "address"
+                        ],
+                        "properties": {
+                          "address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "required": [
+                          "shipments"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "201": {
-        "description": "Created the manifest.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Manifest"
+        "description": "The manifest has been created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ManifestResponse"
+                }
+              }
             }
           }
         }

@@ -1,0 +1,9 @@
+{
+  "name": "tracking_code",
+  "in": "path",
+  "description": "Tracking code which has been returned in the shipment POST request.",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

@@ -7,119 +7,128 @@
     "description": "This endpoint is used to update collections.",
     "parameters": [
       {
-        "in": "path",
         "name": "collection_id",
-        "required": true,
-        "type": "string",
-        "description": "ID of the collection to be updated. Can differ from the `myparcelcom_collection_id` attribute!"
-      },
-      {
-        "in": "body",
-        "name": "collection",
-        "description": "The collection object to be updated.",
+        "in": "path",
+        "description": "ID of the collection to be updated. Can differ from the `myparcelcom_collection_id` attribute!",
         "required": true,
         "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "allOf": [
-                {
-                  "$ref": "#/definitions/Collection"
-                },
-                {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string",
-                      "example": "6e287731-c391-4548-bc48-c09327e1e94f"
-                    },
-                    "attributes": {
-                      "properties": {
-                        "register": {
-                          "type": "boolean",
-                          "example": true,
-                          "description": "Indicates whether the collection should be registered at the carrier."
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "description": "The collection object to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Collection"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "type": "object",
+                        "properties": {
+                          "register": {
+                            "type": "boolean",
+                            "example": true,
+                            "description": "Indicates whether the collection should be registered at the carrier."
+                          }
                         }
-                      }
-                    },
-                    "relationships": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "shipments": {
-                          "$ref": "#/definitions/ShipmentRelationship"
+                      },
+                      "relationships": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "shipments": {
+                            "$ref": "#/components/schemas/ShipmentsRelationship"
+                          }
                         }
                       }
                     }
                   }
-                }
-              ]
+                ]
+              }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "200": {
         "description": "Updated the collection.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "allOf": [
-                {
-                  "$ref": "#/definitions/Collection"
-                },
-                {
-                  "required": [
-                    "id",
-                    "attributes"
-                  ],
-                  "properties": {
-                    "attributes": {
-                      "required": [
-                        "myparcelcom_collection_id",
-                        "collection_time",
-                        "address"
-                      ],
-                      "properties": {
-                        "register": {
-                          "type": "boolean",
-                          "example": true,
-                          "description": "Indicates whether the collection should be registered at the carrier."
-                        },
-                        "tracking_code": {
-                          "type": "string",
-                          "description": "Optional tracking code returned by the carrier.",
-                          "example": "TR4CKMYC0LL3CT10N"
-                        },
-                        "files": {
-                          "$ref": "../properties/Files.json"
-                        }
-                      }
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CollectionResponse"
                     },
-                    "relationships": {
-                      "type": "object",
-                      "additionalProperties": false,
+                    {
                       "properties": {
-                        "shipments": {
-                          "$ref": "#/definitions/ShipmentRelationship"
+                        "attributes": {
+                          "properties": {
+                            "register": {
+                              "type": "boolean",
+                              "example": true,
+                              "description": "Indicates whether the collection should be registered at the carrier."
+                            },
+                            "tracking_code": {
+                              "type": "string",
+                              "description": "Optional tracking code returned by the carrier.",
+                              "example": "TR4CKMYC0LL3CT10N"
+                            },
+                            "files": {
+                              "type": "array",
+                              "items": {
+                                "allOf": [
+                                  {
+                                    "$ref": "#/components/schemas/File"
+                                  },
+                                  {
+                                    "required": [
+                                      "resource_type",
+                                      "data"
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "relationships": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "shipments": {
+                              "$ref": "#/components/schemas/ShipmentsRelationship"
+                            }
+                          }
                         }
                       }
                     }
-                  }
+                  ]
                 }
-              ]
+              }
             }
           }
         }
@@ -134,11 +143,13 @@
     "description": "This endpoint is used to void collections. Not all carriers support voiding of registered shipments.",
     "parameters": [
       {
-        "in": "path",
         "name": "collection_id",
+        "in": "path",
+        "description": "ID of the collection to be voided. Can differ from the `myparcelcom_collection_id` attribute!",
         "required": true,
-        "type": "string",
-        "description": "ID of the collection to be voided. Can differ from the `myparcelcom_collection_id` attribute!"
+        "schema": {
+          "$ref": "#/components/schemas/Uuid"
+        }
       }
     ],
     "responses": {

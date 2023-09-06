@@ -1,0 +1,187 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ShipmentResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "myparcelcom_shipment_id": {
+              "type": "string",
+              "format": "uuid",
+              "example": "7b808eee-bf1c-40cd-98f2-3c335a06417e",
+              "description": "Shipment identifier used by MyParcel.com."
+            },
+            "recipient_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "recipient_tax_identification_numbers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/TaxIdentificationNumber"
+              }
+            },
+            "recipient_tax_number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Use `recipient_tax_identification_numbers` instead.",
+              "deprecated": true
+            },
+            "return_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "sender_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "sender_tax_identification_numbers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/TaxIdentificationNumber"
+              }
+            },
+            "sender_tax_number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Use `sender_tax_identification_numbers` instead.",
+              "deprecated": true
+            },
+            "tax_identification_numbers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/TaxIdentificationNumber"
+              },
+              "description": "Use `sender_tax_identification_numbers` instead.",
+              "deprecated": true
+            },
+            "pickup_location": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "example": "205604"
+                },
+                "address": {
+                  "$ref": "#/components/schemas/BaseAddress"
+                }
+              }
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "Fidget spinners",
+              "description": "Description of the shipment (contents). This may be put on the shipment's label."
+            },
+            "customer_reference": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "#8008135",
+              "description": "Reference for the customer to recognize the shipment by."
+            },
+            "barcode": {
+              "$ref": "#/components/schemas/Barcode"
+            },
+            "tracking_code": {
+              "$ref": "#/components/schemas/TrackingCode"
+            },
+            "tracking_url": {
+              "$ref": "#/components/schemas/TrackingUrl"
+            },
+            "final_mile_carrier": {
+              "$ref": "#/components/schemas/FinalMileCarrier"
+            },
+            "service": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "example": "service-a01"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Parcel to Parcelshop"
+                }
+              }
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "example": "delivery-window:sunday"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Sunday Delivery"
+                  },
+                  "values": {
+                    "type": "object",
+                    "example": {
+                      "pin": "1234"
+                    }
+                  }
+                }
+              }
+            },
+            "total_value": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "physical_properties": {
+              "$ref": "#/components/schemas/BasePhysicalProperties"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/BaseShipmentItem"
+              }
+            },
+            "customs": {
+              "$ref": "#/components/schemas/BaseCustoms"
+            },
+            "channel": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "MyParcel.com",
+              "description": "Name of the application used to create the shipment."
+            },
+            "files": {
+              "readOnly": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/File"
+              }
+            },
+            "collo_number": {
+              "$ref": "#/components/schemas/ColloNumber"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "consolidated_shipments": {
+              "$ref": "#/components/schemas/ShipmentsRelationship"
+            },
+            "collection": {
+              "$ref": "#/components/schemas/CollectionRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

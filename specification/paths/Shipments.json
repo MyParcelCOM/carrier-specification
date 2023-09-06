@@ -3,92 +3,198 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "Create a shipment.",
+    "summary": "Create a new shipment.",
     "description": "This endpoint creates a new shipment in the system of the carrier.",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "shipment",
-        "description": "The shipment object to be created.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Shipment"
-            },
-            "meta": {
-              "type": "object",
-              "properties": {
-                "track_trace": {
-                  "type": "object",
-                  "properties": {
-                    "enabled": {
-                      "type": "boolean",
-                      "description": "Indicates whether or not the carrier should send track and trace emails for this shipment.",
-                      "example": false,
-                      "default": true
+    "requestBody": {
+      "description": "The shipment object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "attributes"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "myparcelcom_shipment_id",
+                          "recipient_address",
+                          "return_address",
+                          "sender_address",
+                          "service",
+                          "physical_properties"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "return_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "pickup_location": {
+                            "required": [
+                              "code",
+                              "address"
+                            ],
+                            "properties": {
+                              "address": {
+                                "required": [
+                                  "street_1",
+                                  "city",
+                                  "country_code"
+                                ]
+                              }
+                            }
+                          },
+                          "service": {
+                            "required": [
+                              "code"
+                            ]
+                          },
+                          "options": {
+                            "items": {
+                              "required": [
+                                "code"
+                              ]
+                            }
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          },
+                          "items": {
+                            "items": {
+                              "required": [
+                                "description",
+                                "quantity"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     }
                   }
-                },
-                "label_mime_type": {
-                  "type": "string",
-                  "description": "Deprecated, use `meta.label.mime_type` instead. The requested mime-type for this shipment's label.",
-                  "example": "application/pdf",
-                  "deprecated": true
-                },
-                "label": {
-                  "type": "object",
-                  "properties": {
-                    "mime_type": {
-                      "type": "string",
-                      "example": "application/pdf",
-                      "default": "application/pdf",
-                      "description": "Requested `mime-type` for the label of this shipment."
-                    },
-                    "size": {
-                      "type": "string",
-                      "example": "A6",
-                      "default": "A6",
-                      "description": "Requested size for the label of this shipment."
-                    },
-                    "print_sku_on_label": {
-                      "type": "boolean",
-                      "description": "Indicates whether or not to display SKU information table on the label.",
-                      "example": true,
-                      "default": false
+                ]
+              },
+              "meta": {
+                "type": "object",
+                "properties": {
+                  "track_trace": {
+                    "type": "object",
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean",
+                        "description": "Indicates whether or not the carrier should send track and trace emails for this shipment.",
+                        "example": false,
+                        "default": true
+                      }
                     }
+                  },
+                  "label_mime_type": {
+                    "type": "string",
+                    "description": "Deprecated, use `meta.label.mime_type` instead. The requested mime-type for this shipment's label.",
+                    "example": "application/pdf",
+                    "deprecated": true
+                  },
+                  "label": {
+                    "type": "object",
+                    "properties": {
+                      "mime_type": {
+                        "type": "string",
+                        "example": "application/pdf",
+                        "default": "application/pdf",
+                        "description": "Requested `mime-type` for the label of this shipment."
+                      },
+                      "size": {
+                        "type": "string",
+                        "example": "A6",
+                        "default": "A6",
+                        "description": "Requested size for the label of this shipment."
+                      },
+                      "print_sku_on_label": {
+                        "type": "boolean",
+                        "description": "Indicates whether or not to display SKU information table on the label.",
+                        "example": true,
+                        "default": false
+                      }
+                    }
+                  },
+                  "print_sku_on_label": {
+                    "type": "boolean",
+                    "description": "Deprecated, use `meta.label.print_sku_on_label` instead. Indicates whether or not to display SKU information table on the label.",
+                    "example": true,
+                    "default": false,
+                    "deprecated": true
                   }
-                },
-                "print_sku_on_label": {
-                  "type": "boolean",
-                  "description": "Deprecated, use `meta.label.print_sku_on_label` instead. Indicates whether or not to display SKU information table on the label.",
-                  "example": true,
-                  "default": false,
-                  "deprecated": true
                 }
               }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "201": {
         "description": "The shipment is created.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Shipment"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ShipmentResponse"
+                    },
+                    {
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "files"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           }
         }

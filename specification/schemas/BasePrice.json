@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "amount": {
+      "$ref": "#/components/schemas/PriceAmount"
+    },
+    "currency": {
+      "$ref": "#/components/schemas/Currency"
+    }
+  }
+}

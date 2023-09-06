@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "properties": {
+    "sku": {
+      "type": "string",
+      "example": "123456789"
+    },
+    "description": {
+      "type": "string",
+      "example": "OnePlus X"
+    },
+    "image_url": {
+      "type": "string",
+      "example": "https://myparcel.com/product.png",
+      "description": "A link to an image of the item."
+    },
+    "item_value": {
+      "$ref": "#/components/schemas/Price"
+    },
+    "item_weight": {
+      "type": "integer",
+      "example": 1000,
+      "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
+    },
+    "item_weight_unit": {
+      "type": "string",
+      "enum": [
+        "mg",
+        "g",
+        "kg",
+        "lb",
+        "oz"
+      ],
+      "example": "g",
+      "description": "Unit of measurement for item_weight."
+    },
+    "quantity": {
+      "type": "integer",
+      "example": 2
+    },
+    "hs_code": {
+      "type": "string",
+      "pattern": "^[0-9.]+$",
+      "example": "8517.12.00",
+      "description": "Harmonized System code used by customs."
+    },
+    "is_preferential_origin": {
+      "type": "boolean",
+      "default": false,
+      "example": false
+    },
+    "origin_country_code": {
+      "$ref": "#/components/schemas/CountryCode"
+    },
+    "tax": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
+        {
+          "readOnly": true
+        }
+      ]
+    },
+    "duty": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
+        {
+          "readOnly": true
+        }
+      ]
+    },
+    "vat_percentage": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "min": 0,
+      "max": 100,
+      "example": 19,
+      "description": "The VAT rate applied to the `item_value` amount."
+    }
+  }
+}
