@@ -5,26 +5,32 @@
   },
   {
     "name": "Manifests",
-    "description": ""
+    "externalDocs": {
+    }
   },
   {
     "name": "MultiColliShipments",
-    "description": ""
+    "externalDocs": {
+    }
   },
   {
     "name": "PickupDropoffLocations",
-    "description": ""
+    "externalDocs": {
+    }
   },
   {
     "name": "ServiceRates",
-    "description": ""
+    "externalDocs": {
+    }
   },
   {
     "name": "Shipments",
-    "description": ""
+    "externalDocs": {
+    }
   },
   {
     "name": "ValidateCredentials",
-    "description": ""
+    "externalDocs": {
+    }
   }
 ]

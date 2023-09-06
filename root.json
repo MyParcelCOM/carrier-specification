@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "$ref": "./specification/info.json"
+  },
+  "servers": [
+    {
+      "url": "https://carrier.myparcel.com"
+    }
+  ],
+  "paths": {
+    "$ref": "./specification/paths.json"
+  },
+  "components": {
+    "schemas": {
+      "$ref": "./specification/schemas.json"
+    },
+    "parameters": {
+      "$ref": "./specification/parameters.json"
+    },
+    "securitySchemes": {
+      "secret": {
+        "type": "apiKey",
+        "name": "X-MYPARCELCOM-SECRET",
+        "in": "header"
+      },
+      "credentials": {
+        "type": "apiKey",
+        "name": "X-MYPARCELCOM-CREDENTIALS",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "secret": [],
+      "credentials": []
+    }
+  ],
+  "tags": {
+    "$ref": "./specification/tags.json"
+  },
+  "externalDocs": {
+    "url": "https://docs.myparcel.com/carrier-integration-program/",
+    "description": "The documentation describing the MyParcel.com carrier integration process."
+  }
+}

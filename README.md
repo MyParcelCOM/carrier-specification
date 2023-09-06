@@ -1,10 +1,9 @@
 # MyParcel.com carrier API specification
 
 [![Packagist](https://img.shields.io/packagist/v/myparcelcom/carrier-specification.svg)](https://packagist.org/packages/myparcelcom/carrier-specification)
-[![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/carrier-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/carrier-specification/swagger.json)
+[![OpenAPI Specification](https://img.shields.io/badge/OpenAPI-3.0-brightgreen.svg)](https://github.com/OAI/OpenAPI-Specification)
 
-Description of the API specification used by MyParcel.com located at [https://carrier-specification.myparcel.com](https://carrier-specification.myparcel.com).
-This specification adheres to the [Swagger 2.0 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) and implements the [JSON API specification](https://jsonapi.org).
+Description of the API specification used by MyParcel.com located at [https://carrier-specification.myparcel.com](https://carrier-specification.myparcel.com). This specification adheres to the [OpenApi 3.0 specification](https://github.com/OAI/OpenAPI-Specification) and implements the [JSON API specification](https://jsonapi.org).
 
 ## Content
 - [Installation](#installation)
@@ -66,7 +65,7 @@ specification/schemas/CountryCode.json
 
 ### Path file naming
 The files in `specification/paths` are named after their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route:
- 
+
 ```
 carriers/{carrier_id}/services
 ```

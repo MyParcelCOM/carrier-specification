@@ -1,0 +1,40 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ManifestResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Batch week 1"
+            },
+            "address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "files": {
+              "readOnly": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/File"
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "shipments": {
+              "$ref": "#/components/schemas/ShipmentsRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

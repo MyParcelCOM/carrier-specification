@@ -1,0 +1,21 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Status"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "description",
+            "timestamp"
+          ]
+        }
+      }
+    }
+  ]
+}

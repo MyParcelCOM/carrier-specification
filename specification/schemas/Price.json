@@ -1,0 +1,13 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/BasePrice"
+    },
+    {
+      "required": [
+        "amount",
+        "currency"
+      ]
+    }
+  ]
+}

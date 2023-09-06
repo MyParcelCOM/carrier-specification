@@ -1,0 +1,43 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Manifest"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "address"
+          ],
+          "properties": {
+            "address": {
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ]
+            },
+            "files": {
+              "items": {
+                "required": [
+                  "resource_type",
+                  "data"
+                ]
+              }
+            }
+          }
+        },
+        "relationships": {
+          "required": [
+            "shipments"
+          ]
+        }
+      }
+    }
+  ]
+}

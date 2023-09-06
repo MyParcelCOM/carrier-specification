@@ -21,5 +21,10 @@
     "walker": {
       "no_empty_descriptions": "off"
     }
+  },
+  "oas3": {
+    "operations": {
+      "no_request_body_name": "off"
+    }
   }
 }

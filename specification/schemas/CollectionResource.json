@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^collections",
+      "example": "collections"
+    },
+    "id": {
+      "type": "string",
+      "example": "6e287731-c391-4548-bc48-c09327e1e94f",
+      "description": "Collection identifier used by the carrier."
+    }
+  }
+}

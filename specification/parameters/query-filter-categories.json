@@ -1,0 +1,8 @@
+{
+  "name": "filter[categories]",
+  "in": "query",
+  "description": "Comma separated list of location categories to return. Possible options are:<ul><li>`pick-up`</li><li>`drop-off`</li></ul>",
+  "schema": {
+    "type": "string"
+  }
+}

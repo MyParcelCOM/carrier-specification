@@ -1,0 +1,44 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/StatusResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "myparcelcom_code": {
+              "type": "string",
+              "example": "shipment-registered",
+              "description": "Status code used by MyParcel.com"
+            },
+            "description": {
+              "type": "string",
+              "example": "Confirmed at destination",
+              "description": "Description of the carrier status."
+            },
+            "category": {
+              "type": "string",
+              "example": "default",
+              "description": "The category code of this status update. If the value is not `default`, some action might be required by the sender or recipient."
+            },
+            "timestamp": {
+              "type": "integer",
+              "example": 1504801719,
+              "description": "Unix timestamp (UTC) of the status update."
+            },
+            "physical_properties": {
+              "$ref": "#/components/schemas/BasePhysicalProperties"
+            },
+            "new_tracking_code": {
+              "type": "string",
+              "example": "3SAAA0123456789",
+              "description": "New tracking code received by the carrier for future tracking of this shipment."
+            }
+          }
+        }
+      }
+    }
+  ]
+}
