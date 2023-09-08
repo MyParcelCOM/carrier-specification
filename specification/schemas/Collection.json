@@ -7,7 +7,6 @@
       "properties": {
         "attributes": {
           "type": "object",
-          "additionalProperties": false,
           "properties": {
             "myparcelcom_collection_id": {
               "type": "string",
