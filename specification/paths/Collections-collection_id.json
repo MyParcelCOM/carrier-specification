@@ -39,7 +39,6 @@
                     ],
                     "properties": {
                       "attributes": {
-                        "type": "object",
                         "properties": {
                           "register": {
                             "type": "boolean",
@@ -87,10 +86,9 @@
                       "properties": {
                         "attributes": {
                           "properties": {
-                            "register": {
-                              "type": "boolean",
-                              "example": true,
-                              "description": "Indicates whether the collection should be registered at the carrier."
+                            "registered_at": {
+                              "type": "integer",
+                              "example": 1504801719
                             },
                             "tracking_code": {
                               "type": "string",
