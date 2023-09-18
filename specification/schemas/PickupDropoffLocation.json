@@ -60,8 +60,7 @@
                     ]
                   }
                 }
-              },
-              "maxItems": 7
+              }
             },
             "position": {
               "type": "object",
