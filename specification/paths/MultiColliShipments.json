@@ -198,7 +198,6 @@
                             "properties": {
                               "attributes": {
                                 "required": [
-                                  "files",
                                   "collo_number"
                                 ]
                               }
