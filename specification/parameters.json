@@ -17,6 +17,9 @@
   "query-filter-categories": {
     "$ref": "./parameters/query-filter-categories.json"
   },
+  "query-filter-location_type": {
+    "$ref": "./parameters/query-filter-location_type.json"
+  },
   "query-street": {
     "$ref": "./parameters/query-street.json"
   },

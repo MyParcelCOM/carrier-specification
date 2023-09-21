@@ -87,10 +87,14 @@
             "location_type": {
               "type": "string",
               "enum": [
+                "locker",
                 "office",
-                "locker"
+                "office-agency",
+                "office-postal",
+                "office-shop"
               ],
-              "default": "office"
+              "default": "office",
+              "example": "office"
             }
           }
         },
