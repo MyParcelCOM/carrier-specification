@@ -22,7 +22,16 @@
         "content": {
           "application/vnd.api+json": {
             "schema": {
-              "$ref": "#/components/schemas/PickupDropoffLocationResponse"
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/PickupDropoffLocationResponse"
+                }
+              }
             }
           }
         }
