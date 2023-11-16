@@ -14,7 +14,7 @@
     "tags": [
       "PickupDropoffLocations"
     ],
-    "summary": "Get a carrier office location by ID.",
+    "summary": "Get a carrier location by ID.",
     "description": "This endpoint retrieves the pick-up and drop-off location with the supplied ID.",
     "responses": {
       "200": {
