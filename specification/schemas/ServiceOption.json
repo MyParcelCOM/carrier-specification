@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "code"
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "example": "delivery-window:sunday"
+    },
+    "name": {
+      "type": "string",
+      "example": "Sunday Delivery"
+    },
+    "values": {
+      "type": "object",
+      "example": {
+        "pin": "1234"
+      }
+    }
+  }
+}

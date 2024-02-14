@@ -83,13 +83,6 @@
                               "code"
                             ]
                           },
-                          "options": {
-                            "items": {
-                              "required": [
-                                "code"
-                              ]
-                            }
-                          },
                           "physical_properties": {
                             "required": [
                               "weight"

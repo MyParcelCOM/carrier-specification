@@ -32,6 +32,9 @@
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
   },
+  "/shipments/{shipment_id}/options": {
+    "$ref": "./paths/Shipments-shipment_id-options.json"
+  },
   "/shipments/{shipment_id}/statuses/{tracking_code}": {
     "$ref": "./paths/Shipments-shipment_id-Statuses-tracking_code.json"
   },

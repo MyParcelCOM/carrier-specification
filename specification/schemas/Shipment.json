@@ -115,23 +115,7 @@
             "options": {
               "type": "array",
               "items": {
-                "type": "object",
-                "properties": {
-                  "code": {
-                    "type": "string",
-                    "example": "delivery-window:sunday"
-                  },
-                  "name": {
-                    "type": "string",
-                    "example": "Sunday Delivery"
-                  },
-                  "values": {
-                    "type": "object",
-                    "example": {
-                      "pin": "1234"
-                    }
-                  }
-                }
+                "$ref": "#/components/schemas/ServiceOption"
               }
             },
             "total_value": {
