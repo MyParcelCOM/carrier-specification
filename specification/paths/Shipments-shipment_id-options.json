@@ -12,7 +12,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the statuses.",
+        "description": "Retrieved the shipment's service options.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
