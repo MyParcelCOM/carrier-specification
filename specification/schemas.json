@@ -86,6 +86,9 @@
   "PriceAmount": {
     "$ref": "./schemas/PriceAmount.json"
   },
+  "ServiceOption": {
+    "$ref": "./schemas/ServiceOption.json"
+  },
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
   },
