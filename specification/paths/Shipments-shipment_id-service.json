@@ -1,0 +1,49 @@
+{
+  "get": {
+    "tags": [
+      "Shipments"
+    ],
+    "summary": "Get the service for a shipment.",
+    "description": "This endpoint retrieves the service for the supplied shipment.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-shipment_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the shipment's service.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "description": "The shipment's service code",
+                  "type": "object",
+                  "required": [
+                    "code"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": "service-a01"
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Parcel to Parcelshop"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
