@@ -25,6 +25,9 @@
                 "data": {
                   "description": "The shipment's service code",
                   "type": "object",
+                  "required": [
+                    "code"
+                  ],
                   "properties": {
                     "code": {
                       "type": "string",
