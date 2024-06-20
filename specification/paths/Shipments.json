@@ -136,21 +136,8 @@
                         "example": "A6",
                         "default": "A6",
                         "description": "Requested size for the label of this shipment."
-                      },
-                      "print_sku_on_label": {
-                        "type": "boolean",
-                        "description": "Indicates whether or not to display SKU information table on the label.",
-                        "example": true,
-                        "default": false
                       }
                     }
-                  },
-                  "print_sku_on_label": {
-                    "type": "boolean",
-                    "description": "Deprecated, use `meta.label.print_sku_on_label` instead. Indicates whether or not to display SKU information table on the label.",
-                    "example": true,
-                    "default": false,
-                    "deprecated": true
                   }
                 }
               }
