@@ -33,6 +33,18 @@
                     "name": {
                       "type": "string",
                       "example": "Parcel to Parcelshop"
+                    },
+                    "package_type": {
+                      "type": "string",
+                      "example": "letterbox",
+                      "description": "The type of package that is used for this service.",
+                      "enum": [
+                        "letter",
+                        "letterbox",
+                        "multi-colli",
+                        "parcel",
+                        "unstamped"
+                      ]
                     }
                   }
                 }
