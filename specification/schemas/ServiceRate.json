@@ -50,6 +50,21 @@
             },
             "fuel_surcharge": {
               "$ref": "#/components/schemas/Price"
+            },
+            "transit_time": {
+              "type": "object",
+              "description": "The number of days for transit. Use 0 for same day delivery.",
+              "additionalProperties": false,
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "max": {
+                  "type": "integer",
+                  "example": 3
+                }
+              }
             }
           }
         }
