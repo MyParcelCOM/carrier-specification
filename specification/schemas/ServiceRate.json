@@ -65,6 +65,23 @@
                   "example": 3
                 }
               }
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ServiceOption"
+                  },
+                  {
+                    "properties": {
+                      "price": {
+                        "$ref": "#/components/schemas/Price"
+                      }
+                    }
+                  }
+                ]
+              }
             }
           }
         }
