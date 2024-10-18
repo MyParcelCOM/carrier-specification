@@ -1,9 +1,9 @@
 # MyParcel.com carrier API specification
 
 [![Packagist](https://img.shields.io/packagist/v/myparcelcom/carrier-specification.svg)](https://packagist.org/packages/myparcelcom/carrier-specification)
-[![OpenAPI Specification](https://img.shields.io/badge/OpenAPI-3.0-brightgreen.svg)](https://github.com/OAI/OpenAPI-Specification)
+[![OpenAPI Specification](https://img.shields.io/badge/OpenAPI-3.1.0-brightgreen.svg)](https://github.com/OAI/OpenAPI-Specification)
 
-Description of the API specification used by MyParcel.com located at [https://carrier-specification.myparcel.com](https://carrier-specification.myparcel.com). This specification adheres to the [OpenApi 3.0 specification](https://github.com/OAI/OpenAPI-Specification) and implements the [JSON API specification](https://jsonapi.org).
+The microservice API specification used by MyParcel.com located at [https://carrier-specification.myparcel.com](https://carrier-specification.myparcel.com). This specification adheres to the [OpenApi 3.1.0 specification](https://github.com/OAI/OpenAPI-Specification) and implements the [JSON API specification](https://jsonapi.org).
 
 ## Content
 - [Installation](#installation)
@@ -12,9 +12,9 @@ Description of the API specification used by MyParcel.com located at [https://ca
 - [License](#license)
 
 ## Installation
-The repository provides Docker containers to validate and preview the spec before committing changes. This is also used when validating pull requests. To install Docker, follow the steps in the [documentation](https://docs.myparcel.com/github/#docker).
+The repository provides Docker containers to validate and preview the spec before committing changes. This is also used when validating pull requests. To install Docker, follow the steps in the [documentation](https://docs.myparcel.com/development.html#docker).
 
-To setup the project for development run:
+To set up the project for development run:
 
 ```bash
 ./mp.sh setup
@@ -86,4 +86,4 @@ specification/parameters/path-carrier_id.json
 Unique parameters can just remain in the path file and do not need to be extracted to their own files.
 
 ## License
-All software by MyParcel.com is licensed under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 
+All software by MyParcel.com is licensed under the [MyParcel.com general terms and conditions](https://www.myparcel.com/legal).

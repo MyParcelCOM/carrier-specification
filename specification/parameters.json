@@ -1,4 +1,7 @@
 {
+  "path-collection_id": {
+    "$ref": "./parameters/path-collection_id.json"
+  },
   "path-country_code": {
     "$ref": "./parameters/path-country_code.json"
   },

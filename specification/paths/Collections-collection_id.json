@@ -1,21 +1,15 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-collection_id"
+    }
+  ],
   "patch": {
     "tags": [
       "Collections"
     ],
     "summary": "Update a collection.",
     "description": "This endpoint is used to update collections.",
-    "parameters": [
-      {
-        "name": "collection_id",
-        "in": "path",
-        "description": "ID of the collection to be updated. Can differ from the `myparcelcom_collection_id` attribute!",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      }
-    ],
     "requestBody": {
       "description": "The collection object to be updated.",
       "required": true,
@@ -139,17 +133,6 @@
     ],
     "summary": "Void a collection.",
     "description": "This endpoint is used to void collections. Not all carriers support voiding of registered shipments.",
-    "parameters": [
-      {
-        "name": "collection_id",
-        "in": "path",
-        "description": "ID of the collection to be voided. Can differ from the `myparcelcom_collection_id` attribute!",
-        "required": true,
-        "schema": {
-          "$ref": "#/components/schemas/Uuid"
-        }
-      }
-    ],
     "responses": {
       "204": {
         "description": "The collection has been voided."
