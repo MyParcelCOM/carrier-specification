@@ -23,3 +23,14 @@ img[alt=logo] {
   padding: 0;
   color: rgb(14, 124, 134);
 }
+
+/* Less visual emphasis on response buttons */
+#redoc .api-content > div > div > div:first-child > div > div > button > div {
+  display: inline-block;
+}
+#redoc .api-content > div > div > div:first-child > div > div > button > div p {
+  margin: 0;
+}
+#redoc .api-content > div > div > div:first-child > div > div > button > strong {
+  margin: 0 4px;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "collection_id",
+  "in": "path",
+  "description": "Identifier which has been returned in the collection POST request.",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

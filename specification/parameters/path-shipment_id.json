@@ -4,6 +4,6 @@
   "description": "Identifier which has been returned in the shipment POST request.",
   "required": true,
   "schema": {
-    "$ref": "#/components/schemas/Uuid"
+    "type": "string"
   }
 }
