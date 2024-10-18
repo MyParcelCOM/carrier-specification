@@ -7,15 +7,13 @@ img[alt=logo] {
   width: 200px;
 }
 
-/* Less visual emphasis on authorizations */
-#redoc div > div > span > span:after {
-  color: rgb(8, 12, 12);
-  font-weight: normal;
-  text-transform: lowercase;
+/* More visual emphasis on authorizations */
+#redoc div > div > span > span > i {
+  color: rgb(14, 124, 134);
 }
 
 /* Less visual emphasis on length limitations */
-#redoc div > div > span > span {
+#redoc table div > div > span > span {
   background: initial;
   border: initial;
   font-family: inherit;

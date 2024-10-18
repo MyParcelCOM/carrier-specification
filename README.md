@@ -1,9 +1,9 @@
 # MyParcel.com carrier API specification
 
 [![Packagist](https://img.shields.io/packagist/v/myparcelcom/carrier-specification.svg)](https://packagist.org/packages/myparcelcom/carrier-specification)
-[![OpenAPI Specification](https://img.shields.io/badge/OpenAPI-3.1-brightgreen.svg)](https://github.com/OAI/OpenAPI-Specification)
+[![OpenAPI Specification](https://img.shields.io/badge/OpenAPI-3.1.0-brightgreen.svg)](https://github.com/OAI/OpenAPI-Specification)
 
-Description of the API specification used by MyParcel.com located at [https://carrier-specification.myparcel.com](https://carrier-specification.myparcel.com). This specification adheres to the [OpenApi 3.1 specification](https://github.com/OAI/OpenAPI-Specification) and implements the [JSON API specification](https://jsonapi.org).
+The microservice API specification used by MyParcel.com located at [https://carrier-specification.myparcel.com](https://carrier-specification.myparcel.com). This specification adheres to the [OpenApi 3.1.0 specification](https://github.com/OAI/OpenAPI-Specification) and implements the [JSON API specification](https://jsonapi.org).
 
 ## Content
 - [Installation](#installation)
@@ -86,4 +86,4 @@ specification/parameters/path-carrier_id.json
 Unique parameters can just remain in the path file and do not need to be extracted to their own files.
 
 ## License
-All software by MyParcel.com is licensed under the [MyParcel.com general terms and conditions](https://www.myparcel.com/legal). 
+All software by MyParcel.com is licensed under the [MyParcel.com general terms and conditions](https://www.myparcel.com/legal).

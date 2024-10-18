@@ -1,4 +1,4 @@
-FROM node:22 as build
+FROM node:22 AS build
 
 COPY . /build
 WORKDIR /build
