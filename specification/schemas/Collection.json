@@ -10,7 +10,9 @@
           "properties": {
             "myparcelcom_collection_id": {
               "type": "string",
-              "example": "6e287731-c391-4548-bc48-c09327e1e94f"
+              "format": "uuid",
+              "example": "6e287731-c391-4548-bc48-c09327e1e94f",
+              "description": "Collection identifier used by MyParcel.com."
             },
             "name": {
               "deprecated": true,

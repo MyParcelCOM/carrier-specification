@@ -68,10 +68,10 @@
     function () {
       requestAnimationFrame(function () {
         // Open external links in a new tab.
-        var links = document.querySelectorAll('.api-content a')
+        const links = document.querySelectorAll('.api-content a')
 
-        for (var l = 0; l < links.length; l++) {
-          if (links[l].href.substr(0, 4) === 'http' && links[l].hostname !== window.location.hostname) {
+        for (let l = 0; l < links.length; l++) {
+          if (links[l].href.substring(0, 4) === 'http' && links[l].hostname !== window.location.hostname) {
             links[l].target = '_blank'
           }
         }
@@ -86,7 +86,7 @@
               // 4. Find the "attributes" property
               if (element.innerText.includes('"attributes"')) {
                 // 5. Find the preceding "id" property
-                var id = element.parentNode.parentNode.previousSibling
+                const id = element.parentNode.parentNode.previousSibling
                 if (id.innerText.includes('"id"')) {
                   // 6. Hide it, this filter makes sure we do not hide "id" properties of RPC endpoints or relationships
                   id.style.display = 'none'
@@ -94,7 +94,7 @@
               }
             })
             // 7. Hide the copy button, because this still copies a POST example including the "id".
-            var copyButton = element.nextSibling.querySelector('button')
+            const copyButton = element.nextSibling.querySelector('button')
             if (copyButton) {
               copyButton.style.display = 'none'
             }
