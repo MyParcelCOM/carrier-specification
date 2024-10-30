@@ -1,36 +1,23 @@
 [
   {
-    "name": "Collections",
-    "description": ""
+    "name": "Collections"
   },
   {
-    "name": "Manifests",
-    "externalDocs": {
-    }
+    "name": "Manifests"
   },
   {
-    "name": "MultiColliShipments",
-    "externalDocs": {
-    }
+    "name": "MultiColliShipments"
   },
   {
-    "name": "PickupDropoffLocations",
-    "externalDocs": {
-    }
+    "name": "PickupDropoffLocations"
   },
   {
-    "name": "ServiceRates",
-    "externalDocs": {
-    }
+    "name": "ServiceRates"
   },
   {
-    "name": "Shipments",
-    "externalDocs": {
-    }
+    "name": "Shipments"
   },
   {
-    "name": "ValidateCredentials",
-    "externalDocs": {
-    }
+    "name": "ValidateCredentials"
   }
 ]
