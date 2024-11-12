@@ -35,24 +35,13 @@
                           },
                           "attributes": {
                             "required": [
-                              "myparcelcom_shipment_id",
                               "recipient_address",
-                              "return_address",
                               "sender_address",
                               "service",
                               "physical_properties"
                             ],
                             "properties": {
                               "recipient_address": {
-                                "required": [
-                                  "first_name",
-                                  "last_name",
-                                  "street_1",
-                                  "city",
-                                  "country_code"
-                                ]
-                              },
-                              "return_address": {
                                 "required": [
                                   "street_1",
                                   "city",
@@ -99,7 +88,6 @@
                             },
                             "attributes": {
                               "required": [
-                                "myparcelcom_shipment_id",
                                 "physical_properties"
                               ],
                               "properties": {
@@ -121,39 +109,6 @@
                           }
                         }
                       ]
-                    }
-                  }
-                }
-              },
-              "meta": {
-                "type": "object",
-                "properties": {
-                  "track_trace": {
-                    "type": "object",
-                    "properties": {
-                      "enabled": {
-                        "type": "boolean",
-                        "description": "Indicates whether or not the carrier should send track and trace emails for this shipment.",
-                        "example": false,
-                        "default": true
-                      }
-                    }
-                  },
-                  "label": {
-                    "type": "object",
-                    "properties": {
-                      "mime_type": {
-                        "type": "string",
-                        "example": "application/pdf",
-                        "default": "application/pdf",
-                        "description": "Requested `mime-type` for the label of this shipment."
-                      },
-                      "size": {
-                        "type": "string",
-                        "example": "A6",
-                        "default": "A6",
-                        "description": "Requested size for the label of this shipment."
-                      }
                     }
                   }
                 }
