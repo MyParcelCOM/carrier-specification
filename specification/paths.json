@@ -11,6 +11,9 @@
   "/get-service-rates": {
     "$ref": "./paths/ServiceRates.json"
   },
+  "/get-multi-colli-service-rates": {
+    "$ref": "./paths/MultiColliServiceRates.json"
+  },
   "/manifests": {
     "$ref": "./paths/Manifests.json"
   },
