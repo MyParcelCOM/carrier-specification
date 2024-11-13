@@ -1,7 +1,7 @@
 {
   "post": {
     "tags": [
-      "MultiColliShipments"
+      "Shipments"
     ],
     "summary": "Create a multi-colli shipment.",
     "description": "This endpoint creates a new multi-colli shipment in the system of the carrier.",
@@ -19,6 +19,10 @@
             "properties": {
               "data": {
                 "type": "object",
+                "required": [
+                  "master",
+                  "colli"
+                ],
                 "properties": {
                   "master": {
                     "allOf": [

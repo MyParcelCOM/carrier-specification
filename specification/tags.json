@@ -3,13 +3,10 @@
     "name": "Collections"
   },
   {
+    "name": "Credentials"
+  },
+  {
     "name": "Manifests"
-  },
-  {
-    "name": "MultiColliServiceRates"
-  },
-  {
-    "name": "MultiColliShipments"
   },
   {
     "name": "PickupDropoffLocations"
@@ -19,8 +16,5 @@
   },
   {
     "name": "Shipments"
-  },
-  {
-    "name": "ValidateCredentials"
   }
 ]
