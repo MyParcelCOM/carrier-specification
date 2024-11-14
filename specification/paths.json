@@ -1,4 +1,7 @@
 {
+  "/validate-credentials": {
+    "$ref": "./paths/ValidateCredentials.json"
+  },
   "/collection-time-slots": {
     "$ref": "./paths/CollectionTimeSlots.json"
   },
@@ -11,11 +14,11 @@
   "/get-service-rates": {
     "$ref": "./paths/ServiceRates.json"
   },
+  "/get-multi-colli-service-rates": {
+    "$ref": "./paths/MultiColliServiceRates.json"
+  },
   "/manifests": {
     "$ref": "./paths/Manifests.json"
-  },
-  "/multi-colli-shipments": {
-    "$ref": "./paths/MultiColliShipments.json"
   },
   "/pickup-dropoff-locations/{pudo_id}": {
     "$ref": "./paths/PickupDropoffLocations-pudo_id.json"
@@ -29,6 +32,9 @@
   "/shipments": {
     "$ref": "./paths/Shipments.json"
   },
+  "/multi-colli-shipments": {
+    "$ref": "./paths/MultiColliShipments.json"
+  },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
   },
@@ -37,8 +43,5 @@
   },
   "/shipments/{shipment_id}/statuses/{tracking_code}": {
     "$ref": "./paths/Shipments-shipment_id-Statuses-tracking_code.json"
-  },
-  "/validate-credentials": {
-    "$ref": "./paths/ValidateCredentials.json"
   }
 }
