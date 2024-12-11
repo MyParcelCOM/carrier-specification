@@ -89,6 +89,27 @@
             }
           }
         }
+      },
+      "404": {
+        "description": "Rating is temporarily unavailable for one or more services, or the destination country is not serviced.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "errors"
+              ],
+              "properties": {
+                "errors": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
