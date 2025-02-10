@@ -2,25 +2,12 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "height": {
-      "type": [
-        "integer",
-        "null"
-      ],
+    "weight": {
+      "type": "integer",
       "minimum": 1,
       "maximum": 2147483647,
-      "example": 150,
-      "description": "Height in millimeters."
-    },
-    "width": {
-      "type": [
-        "integer",
-        "null"
-      ],
-      "minimum": 1,
-      "maximum": 2147483647,
-      "example": 300,
-      "description": "Width in millimeters."
+      "example": 5000,
+      "description": "Weight in grams."
     },
     "length": {
       "type": [
@@ -32,6 +19,26 @@
       "example": 500,
       "description": "Length in millimeters."
     },
+    "width": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 2147483647,
+      "example": 300,
+      "description": "Width in millimeters."
+    },
+    "height": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 2147483647,
+      "example": 150,
+      "description": "Height in millimeters."
+    },
     "volume": {
       "type": [
         "number",
@@ -41,23 +48,6 @@
       "maximum": 2147483647,
       "example": 22.5,
       "description": "Volume in liters. (dm3)"
-    },
-    "weight": {
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 2147483647,
-      "example": 5000,
-      "description": "Weight in grams."
-    },
-    "volumetric_weight": {
-      "type": [
-        "integer",
-        "null"
-      ],
-      "minimum": 1,
-      "maximum": 2147483647,
-      "example": 4500,
-      "description": "Volumetric weight in grams."
     }
   }
 }
