@@ -56,6 +56,9 @@
   "File": {
     "$ref": "./schemas/File.json"
   },
+  "FirstMileCarrier": {
+    "$ref": "./schemas/FirstMileCarrier.json"
+  },
   "FinalMileCarrier": {
     "$ref": "./schemas/FinalMileCarrier.json"
   },

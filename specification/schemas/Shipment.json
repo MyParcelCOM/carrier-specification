@@ -96,6 +96,9 @@
             "tracking_url": {
               "$ref": "#/components/schemas/TrackingUrl"
             },
+            "first_mile_carrier": {
+              "$ref": "#/components/schemas/FirstMileCarrier"
+            },
             "final_mile_carrier": {
               "$ref": "#/components/schemas/FinalMileCarrier"
             },
