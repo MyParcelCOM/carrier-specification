@@ -43,5 +43,8 @@
   },
   "/shipments/{shipment_id}/statuses/{tracking_code}": {
     "$ref": "./paths/Shipments-shipment_id-Statuses-tracking_code.json"
+  },
+  "/available-delivery-dates": {
+    "$ref": "./paths/Available-delivery-dates.json"
   }
 }
