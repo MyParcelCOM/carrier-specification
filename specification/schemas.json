@@ -62,6 +62,9 @@
   "FinalMileCarrier": {
     "$ref": "./schemas/FinalMileCarrier.json"
   },
+  "ISO8601DateTime": {
+    "$ref": "./schemas/ISO8601DateTime.json"
+  },
   "Manifest": {
     "$ref": "./schemas/Manifest.json"
   },
