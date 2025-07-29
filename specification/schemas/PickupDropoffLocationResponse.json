@@ -17,6 +17,7 @@
           "properties": {
             "address": {
               "required": [
+                "company",
                 "street_1",
                 "city",
                 "country_code"
