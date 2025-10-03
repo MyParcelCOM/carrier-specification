@@ -20,9 +20,7 @@
               "required": [
                 "street_1",
                 "city",
-                "country_code",
-                "first_name",
-                "last_name"
+                "country_code"
               ]
             }
           }
