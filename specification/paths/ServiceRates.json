@@ -35,6 +35,7 @@
                         "required": [
                           "recipient_address",
                           "sender_address",
+                          "service",
                           "physical_properties"
                         ],
                         "properties": {
@@ -50,6 +51,11 @@
                               "street_1",
                               "city",
                               "country_code"
+                            ]
+                          },
+                          "service": {
+                            "required": [
+                              "code"
                             ]
                           },
                           "physical_properties": {
