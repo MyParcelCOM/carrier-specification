@@ -107,11 +107,18 @@
               "properties": {
                 "code": {
                   "type": "string",
-                  "example": "service-a01"
+                  "example": "service-a01",
+                  "description": "Shipment service code"
                 },
                 "name": {
                   "type": "string",
-                  "example": "Parcel to Parcelshop"
+                  "example": "Parcel to Parcelshop",
+                  "description": "Shipment service name"
+                },
+                "zone_to_code": {
+                  "type": "string",
+                  "example": "western-europe:netherlands",
+                  "description": "Shipment service destination <a href=\"https://api-specification.myparcel.com/#tag/Zones/paths/~1zones~1%7Bzone_id%7D/get\" target=\"_blank\">Zone</a> code"
                 }
               }
             },
