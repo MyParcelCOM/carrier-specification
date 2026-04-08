@@ -11,6 +11,14 @@
       },
       {
         "$ref": "#/components/parameters/path-tracking_code"
+      },
+      {
+        "name": "collo_number",
+        "in": "query",
+        "description": "Collo number, identifier of a single piece in a multi-colli shipment",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
