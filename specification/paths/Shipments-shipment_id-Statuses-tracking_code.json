@@ -11,6 +11,14 @@
       },
       {
         "$ref": "#/components/parameters/path-tracking_code"
+      },
+      {
+        "name": "barcode",
+        "in": "query",
+        "description": "Shipment barcode, identifier of a single piece in a multi-colli shipment",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
