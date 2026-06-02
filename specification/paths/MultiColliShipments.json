@@ -79,6 +79,36 @@
                                 "required": [
                                   "weight"
                                 ]
+                              },
+                              "pickup_location": {
+                                "required": [
+                                  "code",
+                                  "address"
+                                ],
+                                "properties": {
+                                  "address": {
+                                    "required": [
+                                      "street_1",
+                                      "city",
+                                      "country_code"
+                                    ]
+                                  }
+                                }
+                              },
+                              "drop_off_location": {
+                                "required": [
+                                  "code",
+                                  "address"
+                                ],
+                                "properties": {
+                                  "address": {
+                                    "required": [
+                                      "street_1",
+                                      "city",
+                                      "country_code"
+                                    ]
+                                  }
+                                }
                               }
                             }
                           }
@@ -117,6 +147,36 @@
                                     "required": [
                                       "description",
                                       "quantity"
+                                    ]
+                                  }
+                                }
+                              },
+                              "pickup_location": {
+                                "required": [
+                                  "code",
+                                  "address"
+                                ],
+                                "properties": {
+                                  "address": {
+                                    "required": [
+                                      "street_1",
+                                      "city",
+                                      "country_code"
+                                    ]
+                                  }
+                                }
+                              },
+                              "drop_off_location": {
+                                "required": [
+                                  "code",
+                                  "address"
+                                ],
+                                "properties": {
+                                  "address": {
+                                    "required": [
+                                      "street_1",
+                                      "city",
+                                      "country_code"
                                     ]
                                   }
                                 }

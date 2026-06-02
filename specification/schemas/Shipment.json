@@ -71,6 +71,18 @@
                 }
               }
             },
+            "drop_off_location": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "example": "205604"
+                },
+                "address": {
+                  "$ref": "#/components/schemas/BaseAddress"
+                }
+              }
+            },
             "description": {
               "type": [
                 "string",
