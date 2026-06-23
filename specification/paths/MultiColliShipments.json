@@ -82,8 +82,7 @@
                               },
                               "pickup_location": {
                                 "required": [
-                                  "code",
-                                  "address"
+                                  "code"
                                 ],
                                 "properties": {
                                   "address": {
@@ -97,8 +96,7 @@
                               },
                               "drop_off_location": {
                                 "required": [
-                                  "code",
-                                  "address"
+                                  "code"
                                 ],
                                 "properties": {
                                   "address": {
