@@ -106,7 +106,20 @@
               "$ref": "#/components/schemas/TrackingCode"
             },
             "tracking_url": {
-              "$ref": "#/components/schemas/TrackingUrl"
+              "$ref": "#/components/schemas/TrackingUrl",
+              "description": "URL used by the recipient to view tracking status updates on the carrier website."
+            },
+            "sender_tracking_url": {
+              "readOnly": true,
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/TrackingUrl"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "URL used by the sender to view tracking status updates."
             },
             "first_mile_carrier": {
               "$ref": "#/components/schemas/FirstMileCarrier"
