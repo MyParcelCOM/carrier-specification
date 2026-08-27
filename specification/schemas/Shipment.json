@@ -121,6 +121,13 @@
               ],
               "description": "URL used by the sender to view tracking status updates."
             },
+            "external_shipment_reference": {
+              "readOnly": true,
+              "type": ["string", "null"],
+              "maxLength": 255,
+              "example": "3SABCD0123456789",
+              "description": "Additional carrier shipment reference."
+            },
             "first_mile_carrier": {
               "$ref": "#/components/schemas/FirstMileCarrier"
             },
