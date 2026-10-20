@@ -95,7 +95,10 @@
       }
     },
     "eu_customs": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "European Union customs information for B2C shipments entering from outside the EU. Required for shipments with value not exceeding 150 EUR (see <a href=\"https://taxation-customs.ec.europa.eu/document/download/053e5b4e-f0be-4f20-9a23-3e3b659a6676_en\">EU customs reform guidance</a>)",
       "properties": {
         "merchant_id": {
